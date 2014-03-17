@@ -1,4 +1,4 @@
-hpl
+HPCC
 ===
 
-Private repo for the preparation of HPL for the ISC14 - group EPCC!
+Private repo for the preparation of HPCC for the ISC14 - group EPCC!
