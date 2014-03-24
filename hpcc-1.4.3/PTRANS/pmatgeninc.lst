@@ -1,0 +1,257 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../PTRANS/pmatgeninc.c
+Compiled : 2014-03-24  21:34:55
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../PTRANS/pmatgeninc.o
+           -c ../../../../PTRANS/pmatgeninc.c -I ../../../../include
+           -I ../../../include -I ../../../include/CrayX1 -D Add_
+           -D StringSunStyle -D F77_INTEGER=int -O 2 -h list=m
+           -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../PTRANS/pmatgeninc.c
+Date     : 03/24/2014  21:34:56
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.         /* -*- mode: C; tab-width: 2; indent-tabs-mode: nil; -*- */
+    2.         
+    3.         #include <hpcc.h>
+    4.         
+    5.         static void
+    6.         PTRANS_ladd(int *J, int *K, int *I) {
+    7.           int itmp0 = K[0] + J[0], itmp1;
+    8.           itmp1 = itmp0 >> 16;         I[0] = itmp0 - ( itmp1 << 16 );
+    9.           itmp0 = itmp1 + K[1] + J[1]; I[1] = itmp0 - (( itmp0 >> 15 ) << 15);
+   10.         }
+   11.         
+   12.         static void
+   13.         PTRANS_lmul(int *K, int *J, int *I) {
+   14.           static int ipow30 = ( 1 << 30 );
+   15.           int kt, lt;
+   16.           kt   = K[0] * J[0]; if( kt < 0 ) kt = ( kt + ipow30 ) + ipow30;
+   17.           I[0] = kt - ( ( kt >> 16 ) << 16 );
+   18.           lt   = K[0] * J[1] + K[1] * J[0];
+   19.           if( lt < 0 ) lt = ( lt + ipow30 ) + ipow30;
+   20.           kt = ( kt >> 16 ) + lt;
+   21.           if( kt < 0 ) kt = ( kt + ipow30 ) + ipow30;
+   22.           I[1] = kt - ( ( kt >> 15 ) << 15 );
+   23.         }
+   24.         
+   25.         static struct {
+   26.             int irand[2], ias[2], ics[2];
+   27.         } rancom_;
+   28.         
+   29.         #define rancom_1 rancom_
+   30.         
+   31.         /*  -- ScaLAPACK routines (version 1.7) -- */
+   32.         /*     University of Tennessee, Knoxville, Oak Ridge National Laboratory, */
+   33.         /*     and University of California, Berkeley. */
+   34.         /*     May 1, 1997 */
+   35.         
+   36.         int
+   37.         xjumpm_(int *jumpm, int *mult, int *iadd,
+   38.         	int *irann, int *iranm, int *iam, int *icm) {
+   39.           int i__1;
+   40.         
+   41.           int i, j[2];
+   42.         
+   43.           if (*jumpm > 0) {
+   44.  + w--< 	  for (i = 0; i < 2; ++i) {
+   45.    w    	    iam[i] = mult[i];
+   46.    w    	    icm[i] = iadd[i];
+   47.    w--> 	  }
+   48.         	  i__1 = *jumpm - 1;
+   49.  + 1--< 	  for (i = 0; i < i__1; ++i) {
+   50.  + 1    	    PTRANS_lmul( iam, mult, j);
+   51.    1    	    iam[0] = j[0];
+   52.    1    	    iam[1] = j[1];
+   53.  + 1    	    PTRANS_lmul( icm, mult, j );
+   54.  + 1    	    PTRANS_ladd( iadd, j, icm );
+   55.    1--> 	  }
+   56.  +      	  PTRANS_lmul( irann, iam, j );
+   57.  +      	  PTRANS_ladd( j, icm, iranm );
+   58.           } else {
+   59.         	  iranm[0] = irann[0];
+   60.         	  iranm[1] = irann[1];
+   61.           }
+   62.         
+   63.           return 0;
+   64.         } /* xjumpm_ */
+   65.         
+   66.         int
+   67.         setran_(int *iran, int *ia, int *ic) {
+   68.           int i;
+   69.         
+   70.  + w--<   for (i = 0; i < 2; ++i) {
+   71.    w        rancom_1.irand[i] = iran[i];
+   72.    w        rancom_1.ias[i] = ia[i];
+   73.    w        rancom_1.ics[i] = ic[i];
+   74.    w-->   }
+   75.         
+   76.           return 0;
+   77.         } /* setran_ */
+   78.         
+   79.         
+   80.         int
+   81.         jumpit_(int *mult, int *iadd, int *irann, int *iranm) {
+   82.           int j[2];
+   83.         
+   84.  +        PTRANS_lmul( irann, mult, j);
+   85.  +        PTRANS_ladd( j, iadd, iranm );
+   86.         
+   87.           rancom_1.irand[0] = iranm[0];
+   88.           rancom_1.irand[1] = iranm[1];
+   89.         
+   90.           return 0;
+   91.         } /* jumpit_ */
+   92.         
+   93.         double
+   94.         pdrand() {
+   95.           /* System generated locals */
+   96.           double ret_val;
+   97.         
+   98.           /* Local variables */
+   99.           int j[2];
+  100.         
+  101.  +        ret_val = ((double) rancom_1.irand[0] + (double) rancom_1.irand[1]
+  102.         	     * 65536.0) / 2147483648.0;
+  103.         
+  104.  +        PTRANS_lmul(rancom_1.irand, rancom_1.ias, j);
+  105.  +        PTRANS_ladd(j, rancom_1.ics, rancom_1.irand);
+  106.         
+  107.           return ret_val;
+  108.         } /* pdrand */
+
+CC-6271 CC: VECTOR File = pmatgeninc.c, Line = 44 
+  A loop was not vectorized because its trip count is too small.
+
+CC-6008 CC: SCALAR File = pmatgeninc.c, Line = 44 
+  A loop was unwound.
+
+CC-6287 CC: VECTOR File = pmatgeninc.c, Line = 49 
+  A loop was not vectorized because it contains a call to function "PTRANS_lmul" on line 50.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 50 
+  "PTRANS_lmul" (called from "xjumpm_") was not inlined because the type of argument 3 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 53 
+  "PTRANS_lmul" (called from "xjumpm_") was not inlined because the type of argument 3 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 54 
+  "PTRANS_ladd" (called from "xjumpm_") was not inlined because the type of argument 2 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 56 
+  "PTRANS_lmul" (called from "xjumpm_") was not inlined because the type of argument 3 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 57 
+  "PTRANS_ladd" (called from "xjumpm_") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-6271 CC: VECTOR File = pmatgeninc.c, Line = 70 
+  A loop was not vectorized because its trip count is too small.
+
+CC-6008 CC: SCALAR File = pmatgeninc.c, Line = 70 
+  A loop was unwound.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 84 
+  "PTRANS_lmul" (called from "jumpit_") was not inlined because the type of argument 3 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 85 
+  "PTRANS_ladd" (called from "jumpit_") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-6010 CC: SCALAR File = pmatgeninc.c, Line = 101 
+  A divide was turned into a multiply by a reciprocal
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 104 
+  "PTRANS_lmul" (called from "pdrand") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = pmatgeninc.c, Line = 105 
+  "PTRANS_ladd" (called from "pdrand") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

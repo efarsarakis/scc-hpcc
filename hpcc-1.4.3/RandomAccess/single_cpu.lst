@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../RandomAccess/single_cpu.c
+Compiled : 2014-03-24  21:34:20
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../RandomAccess/single_cpu.o
+           -c ../../../../RandomAccess/single_cpu.c -I ../../../../include
+           -I ../../../include -I ../../../include/CrayX1 -D Add_
+           -D StringSunStyle -D F77_INTEGER=int -O 2 -h list=m
+           -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../RandomAccess/single_cpu.c
+Date     : 03/24/2014  21:34:21
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.         /* -*- mode: C; tab-width: 2; indent-tabs-mode: nil; -*-
+    2.          *
+    3.          * This file contains the interface for the single cpu RandomAccess test.  The
+    4.          * test is only run on a single (random) node in the MPI universe, with all
+    5.          * other CPUs stuck (in theory, idle) in an MPI_Bcast waiting for the selected
+    6.          * CPU to finish the RandomAccess test.
+    7.          *
+    8.          * This test uses the computational core found in core_single_cpu.c
+    9.          */
+   10.         
+   11.         #include <hpcc.h>
+   12.         #include "RandomAccess.h"
+   13.         
+   14.         int
+   15.         HPCC_SingleRandomAccess(HPCC_Params *params)
+   16.         {
+   17.           int myRank, commSize;
+   18.           int rv, errCount, rank, failure = 0;
+   19.           double localGUPs;
+   20.           double scl = 1.0 / RAND_MAX;
+   21.           FILE *outputFile = NULL;
+   22.           MPI_Comm comm = MPI_COMM_WORLD;
+   23.         
+   24.           localGUPs = 0.0;
+   25.         
+   26.  +        MPI_Comm_size( comm, &commSize );
+   27.  +        MPI_Comm_rank( comm, &myRank );
+   28.         
+   29.  +        srand(time(NULL));
+   30.           scl *= commSize;
+   31.         
+   32.           /* select a node at random, but not node 0 (unless there is just one node) */
+   33.           if (1 == commSize)
+   34.             rank = 0;
+   35.           else
+   36.  + 1--<     for (rank = 0; ; rank = (int)(scl * rand())) {
+   37.    1          if (rank > 0 && rank < commSize)
+   38.    1            break;
+   39.    1-->     }
+   40.         
+   41.  +        MPI_Bcast( &rank, 1, MPI_INT, 0, comm ); /* broadcast the rank selected on node 0 */
+   42.         
+   43.           if (myRank == rank) /* if this node has been selected */
+   44.  +          rv = HPCC_RandomAccess( params, 0 == myRank, &localGUPs, &failure );
+   45.         
+   46.  +        MPI_Bcast( &rv, 1, MPI_INT, rank, comm ); /* broadcast error code */
+   47.  +        MPI_Bcast( &localGUPs, 1, MPI_DOUBLE, rank, comm ); /* broadcast GUPs */
+   48.  +        MPI_Bcast( &failure, 1, MPI_INT, rank, comm ); /* broadcast failure indication */
+   49.           errCount = rv;
+   50.           params->SingleGUPs = localGUPs;
+   51.           if (failure) params->Failure = 1;
+   52.         
+   53.  +        BEGIN_IO( myRank, params->outFname, outputFile);
+   54.  +        fprintf( outputFile, "Node(s) with error %d\n", errCount );
+   55.  +        fprintf( outputFile, "Node selected %d\n", rank );
+   56.  +        fprintf( outputFile, "Single GUP/s %.6f\n", localGUPs );
+   57.  +        END_IO( myRank, outputFile );
+   58.         
+   59.           return 0;
+   60.         }
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 26 
+  "MPI_Comm_size" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 27 
+  "MPI_Comm_rank" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 29 
+  "time" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 29 
+  "srand" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-6287 CC: VECTOR File = single_cpu.c, Line = 36 
+  A loop was not vectorized because it contains a call to function "rand" on line 36.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 36 
+  "rand" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 41 
+  "MPI_Bcast" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 44 
+  "HPCC_RandomAccess" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the
+  routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 46 
+  "MPI_Bcast" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 47 
+  "MPI_Bcast" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 48 
+  "MPI_Bcast" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 53 
+  "fopen" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 53 
+  "fprintf" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 54 
+  "fprintf" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 55 
+  "fprintf" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 56 
+  "fprintf" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 57 
+  "fflush" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = single_cpu.c, Line = 57 
+  "fclose" (called from "HPCC_SingleRandomAccess") was not inlined because the compiler was unable to locate the routine.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

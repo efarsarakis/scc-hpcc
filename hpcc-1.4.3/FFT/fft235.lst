@@ -1,0 +1,1177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../FFT/fft235.c
+Compiled : 2014-03-24  21:35:14
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../FFT/fft235.o -c ../../../../FFT/fft235.c
+           -I ../../../../include -I ../../../include
+           -I ../../../include/CrayX1 -D Add_ -D StringSunStyle
+           -D F77_INTEGER=int -O 2 -h list=m -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../FFT/fft235.c
+Date     : 03/24/2014  21:35:16
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.            /* -*- mode: C; tab-width: 2; indent-tabs-mode: nil; fill-column: 79; coding: iso-latin-1-unix -*- */
+    2.            /*
+    3.            C
+    4.            C     FFTE: A FAST FOURIER TRANSFORM PACKAGE
+    5.            C
+    6.            C     (C) COPYRIGHT SOFTWARE, 2000-2004, ALL RIGHTS RESERVED
+    7.            C                BY
+    8.            C         DAISUKE TAKAHASHI
+    9.            C         GRADUATE SCHOOL OF SYSTEMS AND INFORMATION ENGINEERING
+   10.            C         UNIVERSITY OF TSUKUBA
+   11.            C         1-1-1 TENNODAI, TSUKUBA, IBARAKI 305-8573, JAPAN
+   12.            C         E-MAIL: daisuke@cs.tsukuba.ac.jp
+   13.            C
+   14.            C
+   15.            C     RADIX-2, 3, 4, 5 AND 8 FFT ROUTINE
+   16.            C
+   17.            C     FORTRAN77 SOURCE PROGRAM
+   18.            C
+   19.            C     WRITTEN BY DAISUKE TAKAHASHI
+   20.            C
+   21.            */
+   22.            
+   23.            #include "hpccfft.h"
+   24.            
+   25.            static void
+   26.            fft2(fftw_complex *a, fftw_complex *b, int m) {
+   27.              int i, lda, ldb;
+   28.              double x0, x1, y0, y1;
+   29.            
+   30.              lda = m;
+   31.              ldb = m;
+   32.            
+   33.  + r8----<   for (i = 0; i < m; ++i) {
+   34.    r8          x0 = c_re( ARR2D( a, i, 0, lda ) );
+   35.    r8          y0 = c_im( ARR2D( a, i, 0, lda ) );
+   36.    r8          x1 = c_re( ARR2D( a, i, 1, lda ) );
+   37.    r8          y1 = c_im( ARR2D( a, i, 1, lda ) );
+   38.    r8          c_re( ARR2D( b, i, 0, ldb ) ) = x0 + x1;
+   39.    r8          c_im( ARR2D( b, i, 0, ldb ) ) = y0 + y1;
+   40.    r8          c_re( ARR2D( b, i, 1, ldb ) ) = x0 - x1;
+   41.    r8          c_im( ARR2D( b, i, 1, ldb ) ) = y0 - y1;
+   42.    r8---->   }
+   43.            }
+   44.            
+   45.            static void
+   46.            fft4a(fftw_complex *a, fftw_complex *b, fftw_complex *w, int l) {
+   47.              int j, lda, ldb;
+   48.              double wr1, wr2, wr3, wi1, wi2, wi3;
+   49.              double x0, x1, x2, x3, y0, y1, y2, y3;
+   50.            
+   51.              lda = l;
+   52.              ldb = 4;
+   53.            
+   54.    Vp----<   for (j = 0; j < l; ++j) {
+   55.    Vp          wr1 = c_re( w[j] );
+   56.    Vp          wi1 = c_im( w[j] );
+   57.    Vp          wr2 = wr1*wr1 - wi1*wi1;
+   58.    Vp          wi2 = wr1*wi1 + wr1*wi1;
+   59.    Vp          wr3 = wr1*wr2 - wi1*wi2;
+   60.    Vp          wi3 = wr1*wi2 + wi1*wr2;
+   61.    Vp      
+   62.    Vp          x0 = c_re( ARR2D( a, j, 0, lda ) ) + c_re( ARR2D( a, j, 2, lda ) );
+   63.    Vp          y0 = c_im( ARR2D( a, j, 0, lda ) ) + c_im( ARR2D( a, j, 2, lda ) );
+   64.    Vp          x1 = c_re( ARR2D( a, j, 0, lda ) ) - c_re( ARR2D( a, j, 2, lda ) );
+   65.    Vp          y1 = c_im( ARR2D( a, j, 0, lda ) ) - c_im( ARR2D( a, j, 2, lda ) );
+   66.    Vp      
+   67.    Vp          x2 = c_re( ARR2D( a, j, 1, lda ) ) + c_re( ARR2D( a, j, 3, lda ) );
+   68.    Vp          y2 = c_im( ARR2D( a, j, 1, lda ) ) + c_im( ARR2D( a, j, 3, lda ) );
+   69.    Vp          x3 = c_im( ARR2D( a, j, 1, lda ) ) - c_im( ARR2D( a, j, 3, lda ) );
+   70.    Vp          y3 = c_re( ARR2D( a, j, 3, lda ) ) - c_re( ARR2D( a, j, 1, lda ) );
+   71.    Vp      
+   72.    Vp          c_re( ARR2D( b, 0, j, ldb ) ) = x0 + x2;
+   73.    Vp          c_im( ARR2D( b, 0, j, ldb ) ) = y0 + y2;
+   74.    Vp          c_re( ARR2D( b, 2, j, ldb ) ) = wr2 * (x0-x2) - wi2 * (y0-y2);
+   75.    Vp          c_im( ARR2D( b, 2, j, ldb ) ) = wr2 * (y0-y2) + wi2 * (x0-x2);
+   76.    Vp          c_re( ARR2D( b, 1, j, ldb ) ) = wr1 * (x1+x3) - wi1 * (y1+y3);
+   77.    Vp          c_im( ARR2D( b, 1, j, ldb ) ) = wr1 * (y1+y3) + wi1 * (x1+x3);
+   78.    Vp          c_re( ARR2D( b, 3, j, ldb ) ) = wr3 * (x1-x3) - wi3 * (y1-y3);
+   79.    Vp          c_im( ARR2D( b, 3, j, ldb ) ) = wr3 * (y1-y3) + wi3 * (x1-x3);
+   80.    Vp---->   }
+   81.            }
+   82.            
+   83.            static void
+   84.            fft4b(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+   85.              int i, j, lda1, lda2, ldb1, ldb2;
+   86.              double x0, x1, x2, x3, y0, y1, y2, y3;
+   87.              double wr1, wr2, wr3, wi1, wi2, wi3;
+   88.            
+   89.              lda1 = m;
+   90.              lda2 = l;
+   91.              ldb1 = m;
+   92.              ldb2 = 4;
+   93.            
+   94.  + r8----<   for (i = 0; i < m; ++i) {
+   95.    r8          x0 = c_re( ARR3D( a, i, 0, 0, lda1, lda2 ) ) + c_re( ARR3D( a, i, 0, 2, lda1, lda2 ) );
+   96.    r8          y0 = c_im( ARR3D( a, i, 0, 0, lda1, lda2 ) ) + c_im( ARR3D( a, i, 0, 2, lda1, lda2 ) );
+   97.    r8          x1 = c_re( ARR3D( a, i, 0, 0, lda1, lda2 ) ) - c_re( ARR3D( a, i, 0, 2, lda1, lda2 ) );
+   98.    r8          y1 = c_im( ARR3D( a, i, 0, 0, lda1, lda2 ) ) - c_im( ARR3D( a, i, 0, 2, lda1, lda2 ) );
+   99.    r8      
+  100.    r8          x2 = c_re( ARR3D( a, i, 0, 1, lda1, lda2 ) ) + c_re( ARR3D( a, i, 0, 3, lda1, lda2 ) );
+  101.    r8          y2 = c_im( ARR3D( a, i, 0, 1, lda1, lda2 ) ) + c_im( ARR3D( a, i, 0, 3, lda1, lda2 ) );
+  102.    r8          x3 = c_im( ARR3D( a, i, 0, 1, lda1, lda2 ) ) - c_im( ARR3D( a, i, 0, 3, lda1, lda2 ) );
+  103.    r8          y3 = c_re( ARR3D( a, i, 0, 3, lda1, lda2 ) ) - c_re( ARR3D( a, i, 0, 1, lda1, lda2 ) );
+  104.    r8      
+  105.    r8          c_re( ARR3D( b, i, 0, 0, ldb1, ldb2 ) ) = x0 + x2;
+  106.    r8          c_im( ARR3D( b, i, 0, 0, ldb1, ldb2 ) ) = y0 + y2;
+  107.    r8          c_re( ARR3D( b, i, 2, 0, ldb1, ldb2 ) ) = x0 - x2;
+  108.    r8          c_im( ARR3D( b, i, 2, 0, ldb1, ldb2 ) ) = y0 - y2;
+  109.    r8      
+  110.    r8          c_re( ARR3D( b, i, 1, 0, ldb1, ldb2 ) ) = x1 + x3;
+  111.    r8          c_im( ARR3D( b, i, 1, 0, ldb1, ldb2 ) ) = y1 + y3;
+  112.    r8          c_re( ARR3D( b, i, 3, 0, ldb1, ldb2 ) ) = x1 - x3;
+  113.    r8          c_im( ARR3D( b, i, 3, 0, ldb1, ldb2 ) ) = y1 - y3;
+  114.    r8---->   }
+  115.            
+  116.  + 1-----<   for (j = 1; j < l; ++j) {
+  117.    1           wr1 = c_re( w[j] );
+  118.    1           wi1 = c_im( w[j] );
+  119.    1           wr2 = wr1*wr1 - wi1*wi1;
+  120.    1           wi2 = wr1*wi1 + wr1*wi1;
+  121.    1           wr3 = wr1*wr2 - wi1*wi2;
+  122.    1           wi3 = wr1*wi2 + wi1*wr2;
+  123.    1       
+  124.    1 Vp--<     for (i = 0; i < m; ++i) {
+  125.    1 Vp          x0 = c_re( ARR3D( a, i, j, 0, lda1, lda2 ) ) + c_re( ARR3D( a, i, j, 2, lda1, lda2 ) );
+  126.    1 Vp          y0 = c_im( ARR3D( a, i, j, 0, lda1, lda2 ) ) + c_im( ARR3D( a, i, j, 2, lda1, lda2 ) );
+  127.    1 Vp          x1 = c_re( ARR3D( a, i, j, 0, lda1, lda2 ) ) - c_re( ARR3D( a, i, j, 2, lda1, lda2 ) );
+  128.    1 Vp          y1 = c_im( ARR3D( a, i, j, 0, lda1, lda2 ) ) - c_im( ARR3D( a, i, j, 2, lda1, lda2 ) );
+  129.    1 Vp    
+  130.    1 Vp          x2 = c_re( ARR3D( a, i, j, 1, lda1, lda2 ) ) + c_re( ARR3D( a, i, j, 3, lda1, lda2 ) );
+  131.    1 Vp          y2 = c_im( ARR3D( a, i, j, 1, lda1, lda2 ) ) + c_im( ARR3D( a, i, j, 3, lda1, lda2 ) );
+  132.    1 Vp          x3 = c_im( ARR3D( a, i, j, 1, lda1, lda2 ) ) - c_im( ARR3D( a, i, j, 3, lda1, lda2 ) );
+  133.    1 Vp          y3 = c_re( ARR3D( a, i, j, 3, lda1, lda2 ) ) - c_re( ARR3D( a, i, j, 1, lda1, lda2 ) );
+  134.    1 Vp    
+  135.    1 Vp          c_re( ARR3D( b, i, 0, j, ldb1, ldb2 ) ) = x0 + x2;
+  136.    1 Vp          c_im( ARR3D( b, i, 0, j, ldb1, ldb2 ) ) = y0 + y2;
+  137.    1 Vp          c_re( ARR3D( b, i, 2, j, ldb1, ldb2 ) ) = wr2 * (x0-x2) - wi2 * (y0-y2);
+  138.    1 Vp          c_im( ARR3D( b, i, 2, j, ldb1, ldb2 ) ) = wr2 * (y0-y2) + wi2 * (x0-x2);
+  139.    1 Vp          c_re( ARR3D( b, i, 1, j, ldb1, ldb2 ) ) = wr1 * (x1+x3) - wi1 * (y1+y3);
+  140.    1 Vp          c_im( ARR3D( b, i, 1, j, ldb1, ldb2 ) ) = wr1 * (y1+y3) + wi1 * (x1+x3);
+  141.    1 Vp          c_re( ARR3D( b, i, 3, j, ldb1, ldb2 ) ) = wr3 * (x1-x3) - wi3 * (y1-y3);
+  142.    1 Vp          c_im( ARR3D( b, i, 3, j, ldb1, ldb2 ) ) = wr3 * (y1-y3) + wi3 * (x1-x3);
+  143.    1 Vp-->     }
+  144.    1----->   }
+  145.            }
+  146.            
+  147.            static void
+  148.            fft8a(fftw_complex *a, fftw_complex *b, fftw_complex *w, int l) {
+  149.              int j, lda, ldb;
+  150.              double x0, x1, x2, x3, x4, x5, x6, x7, y0, y1, y2, y3, y4, y5, y6, y7;
+  151.              double wr1, wr2, wr3, wr4, wr5, wr6, wr7, wi1, wi2, wi3, wi4, wi5, wi6, wi7;
+  152.              double u0, u1, u2, u3, v0, v1, v2, v3;
+  153.              double c81 = 0.70710678118654752;
+  154.            
+  155.              lda = l;
+  156.              ldb = 8;
+  157.            
+  158.    Vp----<   for (j = 0; j < l; ++j) {
+  159.    Vp          wr1 = c_re( w[j] );
+  160.    Vp          wi1 = c_im( w[j] );
+  161.    Vp          wr2 = wr1*wr1 - wi1*wi1;
+  162.    Vp          wi2 = wr1*wi1 + wr1*wi1;
+  163.    Vp          wr3 = wr1*wr2 - wi1*wi2;
+  164.    Vp          wi3 = wr1*wi2 + wi1*wr2;
+  165.    Vp          wr4 = wr2*wr2 - wi2*wi2;
+  166.    Vp          wi4 = wr2*wi2 + wr2*wi2;
+  167.    Vp          wr5 = wr2*wr3 - wi2*wi3;
+  168.    Vp          wi5 = wr2*wi3 + wi2*wr3;
+  169.    Vp          wr6 = wr3*wr3 - wi3*wi3;
+  170.    Vp          wi6 = wr3*wi3 + wr3*wi3;
+  171.    Vp          wr7 = wr3*wr4 - wi3*wi4;
+  172.    Vp          wi7 = wr3*wi4 + wi3*wr4;
+  173.    Vp      
+  174.    Vp          x0 = c_re( ARR2D( a, j, 0, lda ) ) + c_re( ARR2D( a, j, 4, lda ) );
+  175.    Vp          y0 = c_im( ARR2D( a, j, 0, lda ) ) + c_im( ARR2D( a, j, 4, lda ) );
+  176.    Vp          x1 = c_re( ARR2D( a, j, 0, lda ) ) - c_re( ARR2D( a, j, 4, lda ) );
+  177.    Vp          y1 = c_im( ARR2D( a, j, 0, lda ) ) - c_im( ARR2D( a, j, 4, lda ) );
+  178.    Vp      
+  179.    Vp          x2 = c_re( ARR2D( a, j, 2, lda ) ) + c_re( ARR2D( a, j, 6, lda ) );
+  180.    Vp          y2 = c_im( ARR2D( a, j, 2, lda ) ) + c_im( ARR2D( a, j, 6, lda ) );
+  181.    Vp          x3 = c_im( ARR2D( a, j, 2, lda ) ) - c_im( ARR2D( a, j, 6, lda ) );
+  182.    Vp          y3 = c_re( ARR2D( a, j, 6, lda ) ) - c_re( ARR2D( a, j, 2, lda ) );
+  183.    Vp      
+  184.    Vp          u0 = x0 + x2;
+  185.    Vp          v0 = y0 + y2;
+  186.    Vp          u1 = x0 - x2;
+  187.    Vp          v1 = y0 - y2;
+  188.    Vp      
+  189.    Vp          x4 = c_re( ARR2D( a, j, 1, lda ) ) + c_re( ARR2D( a, j, 5, lda ) );
+  190.    Vp          y4 = c_im( ARR2D( a, j, 1, lda ) ) + c_im( ARR2D( a, j, 5, lda ) );
+  191.    Vp          x5 = c_re( ARR2D( a, j, 1, lda ) ) - c_re( ARR2D( a, j, 5, lda ) );
+  192.    Vp          y5 = c_im( ARR2D( a, j, 1, lda ) ) - c_im( ARR2D( a, j, 5, lda ) );
+  193.    Vp      
+  194.    Vp          x6 = c_re( ARR2D( a, j, 3, lda ) ) + c_re( ARR2D( a, j, 7, lda ) );
+  195.    Vp          y6 = c_im( ARR2D( a, j, 3, lda ) ) + c_im( ARR2D( a, j, 7, lda ) );
+  196.    Vp          x7 = c_re( ARR2D( a, j, 3, lda ) ) - c_re( ARR2D( a, j, 7, lda ) );
+  197.    Vp          y7 = c_im( ARR2D( a, j, 3, lda ) ) - c_im( ARR2D( a, j, 7, lda ) );
+  198.    Vp      
+  199.    Vp          u2 = x4 + x6;
+  200.    Vp          v2 = y4 + y6;
+  201.    Vp          u3 = y4 - y6;
+  202.    Vp          v3 = x6 - x4;
+  203.    Vp      
+  204.    Vp          c_re( ARR2D( b, 0, j, ldb ) ) = u0 + u2;
+  205.    Vp          c_im( ARR2D( b, 0, j, ldb ) ) = v0 + v2;
+  206.    Vp          c_re( ARR2D( b, 4, j, ldb ) ) = wr4 * (u0-u2) - wi4 * (v0-v2);
+  207.    Vp          c_im( ARR2D( b, 4, j, ldb ) ) = wr4 * (v0-v2) + wi4 * (u0-u2);
+  208.    Vp          c_re( ARR2D( b, 2, j, ldb ) ) = wr2 * (u1+u3) - wi2 * (v1+v3);
+  209.    Vp          c_im( ARR2D( b, 2, j, ldb ) ) = wr2 * (v1+v3) + wi2 * (u1+u3);
+  210.    Vp          c_re( ARR2D( b, 6, j, ldb ) ) = wr6 * (u1-u3) - wi6 * (v1-v3);
+  211.    Vp          c_im( ARR2D( b, 6, j, ldb ) ) = wr6 * (v1-v3) + wi6 * (u1-u3);
+  212.    Vp      
+  213.    Vp          u0 = x1 + c81 * (x5 - x7);
+  214.    Vp          v0 = y1 + c81 * (y5 - y7);
+  215.    Vp          u1 = x1 - c81 * (x5 - x7);
+  216.    Vp          v1 = y1 - c81 * (y5 - y7);
+  217.    Vp          u2 = x3 + c81 * (y5 + y7);
+  218.    Vp          v2 = y3 - c81 * (x5 + x7);
+  219.    Vp          u3 = x3 - c81 * (y5 + y7);
+  220.    Vp          v3 = y3 + c81 * (x5 + x7);
+  221.    Vp      
+  222.    Vp          c_re( ARR2D( b, 1, j, ldb ) ) = wr1 * (u0+u2) - wi1 * (v0+v2);
+  223.    Vp          c_im( ARR2D( b, 1, j, ldb ) ) = wr1 * (v0+v2) + wi1 * (u0+u2);
+  224.    Vp          c_re( ARR2D( b, 5, j, ldb ) ) = wr5 * (u1+u3) - wi5 * (v1+v3);
+  225.    Vp          c_im( ARR2D( b, 5, j, ldb ) ) = wr5 * (v1+v3) + wi5 * (u1+u3);
+  226.    Vp          c_re( ARR2D( b, 3, j, ldb ) ) = wr3 * (u1-u3) - wi3 * (v1-v3);
+  227.    Vp          c_im( ARR2D( b, 3, j, ldb ) ) = wr3 * (v1-v3) + wi3 * (u1-u3);
+  228.    Vp          c_re( ARR2D( b, 7, j, ldb ) ) = wr7 * (u0-u2) - wi7 * (v0-v2);
+  229.    Vp          c_im( ARR2D( b, 7, j, ldb ) ) = wr7 * (v0-v2) + wi7 * (u0-u2);
+  230.    Vp---->   }
+  231.            }
+  232.            
+  233.            static void
+  234.            fft8b(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  235.              int i, j, lda1, lda2, ldb1, ldb2;
+  236.              double x0, x1, x2, x3, x4, x5, x6, x7, y0, y1, y2, y3, y4, y5, y6, y7;
+  237.              double wr1, wr2, wr3, wr4, wr5, wr6, wr7, wi1, wi2, wi3, wi4, wi5, wi6, wi7;
+  238.              double u0, u1, u2, u3, v0, v1, v2, v3;
+  239.              double c81 = 0.70710678118654752;
+  240.            
+  241.              lda1 = m;
+  242.              lda2 = l;
+  243.              ldb1 = m;
+  244.              ldb2 = 8;
+  245.            
+  246.    Vp----<   for (i = 0; i < m; ++i) {
+  247.    Vp          x0 = c_re( ARR3D( a, i, 0, 0, lda1, lda2 ) ) + c_re( ARR3D( a, i, 0, 4, lda1, lda2 ) );
+  248.    Vp          y0 = c_im( ARR3D( a, i, 0, 0, lda1, lda2 ) ) + c_im( ARR3D( a, i, 0, 4, lda1, lda2 ) );
+  249.    Vp          x1 = c_re( ARR3D( a, i, 0, 0, lda1, lda2 ) ) - c_re( ARR3D( a, i, 0, 4, lda1, lda2 ) );
+  250.    Vp          y1 = c_im( ARR3D( a, i, 0, 0, lda1, lda2 ) ) - c_im( ARR3D( a, i, 0, 4, lda1, lda2 ) );
+  251.    Vp      
+  252.    Vp          x2 = c_re( ARR3D( a, i, 0, 2, lda1, lda2 ) ) + c_re( ARR3D( a, i, 0, 6, lda1, lda2 ) );
+  253.    Vp          y2 = c_im( ARR3D( a, i, 0, 2, lda1, lda2 ) ) + c_im( ARR3D( a, i, 0, 6, lda1, lda2 ) );
+  254.    Vp          x3 = c_im( ARR3D( a, i, 0, 2, lda1, lda2 ) ) - c_im( ARR3D( a, i, 0, 6, lda1, lda2 ) );
+  255.    Vp          y3 = c_re( ARR3D( a, i, 0, 6, lda1, lda2 ) ) - c_re( ARR3D( a, i, 0, 2, lda1, lda2 ) );
+  256.    Vp      
+  257.    Vp          u0 = x0 + x2;
+  258.    Vp          v0 = y0 + y2;
+  259.    Vp          u1 = x0 - x2;
+  260.    Vp          v1 = y0 - y2;
+  261.    Vp      
+  262.    Vp          x4 = c_re( ARR3D( a, i, 0, 1, lda1, lda2 ) ) + c_re( ARR3D( a, i, 0, 5, lda1, lda2 ) );
+  263.    Vp          y4 = c_im( ARR3D( a, i, 0, 1, lda1, lda2 ) ) + c_im( ARR3D( a, i, 0, 5, lda1, lda2 ) );
+  264.    Vp          x5 = c_re( ARR3D( a, i, 0, 1, lda1, lda2 ) ) - c_re( ARR3D( a, i, 0, 5, lda1, lda2 ) );
+  265.    Vp          y5 = c_im( ARR3D( a, i, 0, 1, lda1, lda2 ) ) - c_im( ARR3D( a, i, 0, 5, lda1, lda2 ) );
+  266.    Vp      
+  267.    Vp          x6 = c_re( ARR3D( a, i, 0, 3, lda1, lda2 ) ) + c_re( ARR3D( a, i, 0, 7, lda1, lda2 ) );
+  268.    Vp          y6 = c_im( ARR3D( a, i, 0, 3, lda1, lda2 ) ) + c_im( ARR3D( a, i, 0, 7, lda1, lda2 ) );
+  269.    Vp          x7 = c_re( ARR3D( a, i, 0, 3, lda1, lda2 ) ) - c_re( ARR3D( a, i, 0, 7, lda1, lda2 ) );
+  270.    Vp          y7 = c_im( ARR3D( a, i, 0, 3, lda1, lda2 ) ) - c_im( ARR3D( a, i, 0, 7, lda1, lda2 ) );
+  271.    Vp      
+  272.    Vp          u2 = x4 + x6;
+  273.    Vp          v2 = y4 + y6;
+  274.    Vp          u3 = y4 - y6;
+  275.    Vp          v3 = x6 - x4;
+  276.    Vp      
+  277.    Vp          c_re( ARR3D( b, i, 0, 0, ldb1, ldb2 ) ) = u0 + u2;
+  278.    Vp          c_im( ARR3D( b, i, 0, 0, ldb1, ldb2 ) ) = v0 + v2;
+  279.    Vp          c_re( ARR3D( b, i, 4, 0, ldb1, ldb2 ) ) = u0 - u2;
+  280.    Vp          c_im( ARR3D( b, i, 4, 0, ldb1, ldb2 ) ) = v0 - v2;
+  281.    Vp      
+  282.    Vp          c_re( ARR3D( b, i, 2, 0, ldb1, ldb2 ) ) = u1 + u3;
+  283.    Vp          c_im( ARR3D( b, i, 2, 0, ldb1, ldb2 ) ) = v1 + v3;
+  284.    Vp          c_re( ARR3D( b, i, 6, 0, ldb1, ldb2 ) ) = u1 - u3;
+  285.    Vp          c_im( ARR3D( b, i, 6, 0, ldb1, ldb2 ) ) = v1 - v3;
+  286.    Vp      
+  287.    Vp          u0 = x1 + c81 * (x5 - x7);
+  288.    Vp          v0 = y1 + c81 * (y5 - y7);
+  289.    Vp          u1 = x1 - c81 * (x5 - x7);
+  290.    Vp          v1 = y1 - c81 * (y5 - y7);
+  291.    Vp          u2 = x3 + c81 * (y5 + y7);
+  292.    Vp          v2 = y3 - c81 * (x5 + x7);
+  293.    Vp          u3 = x3 - c81 * (y5 + y7);
+  294.    Vp          v3 = y3 + c81 * (x5 + x7);
+  295.    Vp      
+  296.    Vp          c_re( ARR3D( b, i, 1, 0, ldb1, ldb2 ) ) = u0 + u2;
+  297.    Vp          c_im( ARR3D( b, i, 1, 0, ldb1, ldb2 ) ) = v0 + v2;
+  298.    Vp          c_re( ARR3D( b, i, 5, 0, ldb1, ldb2 ) ) = u1 + u3;
+  299.    Vp          c_im( ARR3D( b, i, 5, 0, ldb1, ldb2 ) ) = v1 + v3;
+  300.    Vp      
+  301.    Vp          c_re( ARR3D( b, i, 3, 0, ldb1, ldb2 ) ) = u1 - u3;
+  302.    Vp          c_im( ARR3D( b, i, 3, 0, ldb1, ldb2 ) ) = v1 - v3;
+  303.    Vp          c_re( ARR3D( b, i, 7, 0, ldb1, ldb2 ) ) = u0 - u2;
+  304.    Vp          c_im( ARR3D( b, i, 7, 0, ldb1, ldb2 ) ) = v0 - v2;
+  305.    Vp---->   }
+  306.            
+  307.  + 1-----<   for (j = 1; j < l; ++j) {
+  308.    1           wr1 = c_re( w[j] );
+  309.    1           wi1 = c_im( w[j] );
+  310.    1           wr2 = wr1*wr1 - wi1*wi1;
+  311.    1           wi2 = wr1*wi1 + wr1*wi1;
+  312.    1           wr3 = wr1*wr2 - wi1*wi2;
+  313.    1           wi3 = wr1*wi2 + wi1*wr2;
+  314.    1           wr4 = wr2*wr2 - wi2*wi2;
+  315.    1           wi4 = wr2*wi2 + wr2*wi2;
+  316.    1           wr5 = wr2*wr3 - wi2*wi3;
+  317.    1           wi5 = wr2*wi3 + wi2*wr3;
+  318.    1           wr6 = wr3*wr3 - wi3*wi3;
+  319.    1           wi6 = wr3*wi3 + wr3*wi3;
+  320.    1           wr7 = wr3*wr4 - wi3*wi4;
+  321.    1           wi7 = wr3*wi4 + wi3*wr4;
+  322.    1       
+  323.    1 Vp--<     for (i = 0; i < m; ++i) {
+  324.    1 Vp          x0 = c_re( ARR3D( a, i, j, 0, lda1, lda2 ) ) + c_re( ARR3D( a, i, j, 4, lda1, lda2 ) );
+  325.    1 Vp          y0 = c_im( ARR3D( a, i, j, 0, lda1, lda2 ) ) + c_im( ARR3D( a, i, j, 4, lda1, lda2 ) );
+  326.    1 Vp          x1 = c_re( ARR3D( a, i, j, 0, lda1, lda2 ) ) - c_re( ARR3D( a, i, j, 4, lda1, lda2 ) );
+  327.    1 Vp          y1 = c_im( ARR3D( a, i, j, 0, lda1, lda2 ) ) - c_im( ARR3D( a, i, j, 4, lda1, lda2 ) );
+  328.    1 Vp    
+  329.    1 Vp          x2 = c_re( ARR3D( a, i, j, 2, lda1, lda2 ) ) + c_re( ARR3D( a, i, j, 6, lda1, lda2 ) );
+  330.    1 Vp          y2 = c_im( ARR3D( a, i, j, 2, lda1, lda2 ) ) + c_im( ARR3D( a, i, j, 6, lda1, lda2 ) );
+  331.    1 Vp          x3 = c_im( ARR3D( a, i, j, 2, lda1, lda2 ) ) - c_im( ARR3D( a, i, j, 6, lda1, lda2 ) );
+  332.    1 Vp          y3 = c_re( ARR3D( a, i, j, 6, lda1, lda2 ) ) - c_re( ARR3D( a, i, j, 2, lda1, lda2 ) );
+  333.    1 Vp    
+  334.    1 Vp          u0 = x0 + x2;
+  335.    1 Vp          v0 = y0 + y2;
+  336.    1 Vp          u1 = x0 - x2;
+  337.    1 Vp          v1 = y0 - y2;
+  338.    1 Vp    
+  339.    1 Vp          x4 = c_re( ARR3D( a, i, j, 1, lda1, lda2 ) ) + c_re( ARR3D( a, i, j, 5, lda1, lda2 ) );
+  340.    1 Vp          y4 = c_im( ARR3D( a, i, j, 1, lda1, lda2 ) ) + c_im( ARR3D( a, i, j, 5, lda1, lda2 ) );
+  341.    1 Vp          x5 = c_re( ARR3D( a, i, j, 1, lda1, lda2 ) ) - c_re( ARR3D( a, i, j, 5, lda1, lda2 ) );
+  342.    1 Vp          y5 = c_im( ARR3D( a, i, j, 1, lda1, lda2 ) ) - c_im( ARR3D( a, i, j, 5, lda1, lda2 ) );
+  343.    1 Vp    
+  344.    1 Vp          x6 = c_re( ARR3D( a, i, j, 3, lda1, lda2 ) ) + c_re( ARR3D( a, i, j, 7, lda1, lda2 ) );
+  345.    1 Vp          y6 = c_im( ARR3D( a, i, j, 3, lda1, lda2 ) ) + c_im( ARR3D( a, i, j, 7, lda1, lda2 ) );
+  346.    1 Vp          x7 = c_re( ARR3D( a, i, j, 3, lda1, lda2 ) ) - c_re( ARR3D( a, i, j, 7, lda1, lda2 ) );
+  347.    1 Vp          y7 = c_im( ARR3D( a, i, j, 3, lda1, lda2 ) ) - c_im( ARR3D( a, i, j, 7, lda1, lda2 ) );
+  348.    1 Vp    
+  349.    1 Vp          u2 = x4 + x6;
+  350.    1 Vp          v2 = y4 + y6;
+  351.    1 Vp          u3 = y4 - y6;
+  352.    1 Vp          v3 = x6 - x4;
+  353.    1 Vp    
+  354.    1 Vp          c_re( ARR3D( b, i, 0, j, ldb1, ldb2 ) ) = u0 + u2;
+  355.    1 Vp          c_im( ARR3D( b, i, 0, j, ldb1, ldb2 ) ) = v0 + v2;
+  356.    1 Vp          c_re( ARR3D( b, i, 4, j, ldb1, ldb2 ) ) = wr4 * (u0-u2) - wi4 * (v0-v2);
+  357.    1 Vp          c_im( ARR3D( b, i, 4, j, ldb1, ldb2 ) ) = wr4 * (v0-v2) + wi4 * (u0-u2);
+  358.    1 Vp          c_re( ARR3D( b, i, 2, j, ldb1, ldb2 ) ) = wr2 * (u1+u3) - wi2 * (v1+v3);
+  359.    1 Vp          c_im( ARR3D( b, i, 2, j, ldb1, ldb2 ) ) = wr2 * (v1+v3) + wi2 * (u1+u3);
+  360.    1 Vp          c_re( ARR3D( b, i, 6, j, ldb1, ldb2 ) ) = wr6 * (u1-u3) - wi6 * (v1-v3);
+  361.    1 Vp          c_im( ARR3D( b, i, 6, j, ldb1, ldb2 ) ) = wr6 * (v1-v3) + wi6 * (u1-u3);
+  362.    1 Vp    
+  363.    1 Vp          u0 = x1 + c81 * (x5 - x7);
+  364.    1 Vp          v0 = y1 + c81 * (y5 - y7);
+  365.    1 Vp          u1 = x1 - c81 * (x5 - x7);
+  366.    1 Vp          v1 = y1 - c81 * (y5 - y7);
+  367.    1 Vp          u2 = x3 + c81 * (y5 + y7);
+  368.    1 Vp          v2 = y3 - c81 * (x5 + x7);
+  369.    1 Vp          u3 = x3 - c81 * (y5 + y7);
+  370.    1 Vp          v3 = y3 + c81 * (x5 + x7);
+  371.    1 Vp    
+  372.    1 Vp          c_re( ARR3D( b, i, 1, j, ldb1, ldb2 ) ) = wr1 * (u0+u2) - wi1 * (v0+v2);
+  373.    1 Vp          c_im( ARR3D( b, i, 1, j, ldb1, ldb2 ) ) = wr1 * (v0+v2) + wi1 * (u0+u2);
+  374.    1 Vp          c_re( ARR3D( b, i, 5, j, ldb1, ldb2 ) ) = wr5 * (u1+u3) - wi5 * (v1+v3);
+  375.    1 Vp          c_im( ARR3D( b, i, 5, j, ldb1, ldb2 ) ) = wr5 * (v1+v3) + wi5 * (u1+u3);
+  376.    1 Vp          c_re( ARR3D( b, i, 3, j, ldb1, ldb2 ) ) = wr3 * (u1-u3) - wi3 * (v1-v3);
+  377.    1 Vp          c_im( ARR3D( b, i, 3, j, ldb1, ldb2 ) ) = wr3 * (v1-v3) + wi3 * (u1-u3);
+  378.    1 Vp          c_re( ARR3D( b, i, 7, j, ldb1, ldb2 ) ) = wr7 * (u0-u2) - wi7 * (v0-v2);
+  379.    1 Vp          c_im( ARR3D( b, i, 7, j, ldb1, ldb2 ) ) = wr7 * (v0-v2) + wi7 * (u0-u2);
+  380.    1 Vp-->     }
+  381.    1----->   }
+  382.            }
+  383.            
+  384.            static void
+  385.            fft3a(fftw_complex *a, fftw_complex *b, fftw_complex *w, int l) {
+  386.              int j;
+  387.              double x0, x1, x2;
+  388.              double y0, y1, y2;
+  389.              double wr1, wr2;
+  390.              double wi1, wi2;
+  391.              double c31 = 0.86602540378443865, c32 = 0.5;
+  392.            
+  393.    Vp----<   for (j = 0; j < l; ++j) {
+  394.    Vp          wr1 = c_re( w[j] );
+  395.    Vp          wi1 = c_im( w[j] );
+  396.    Vp          wr2=wr1*wr1-wi1*wi1;
+  397.    Vp          wi2=wr1*wi1+wr1*wi1;
+  398.    Vp          x0 = c_re( ARR2D( a, j, 1, l ) ) + c_re( ARR2D( a, j, 2, l ) );
+  399.    Vp          y0 = c_im( ARR2D( a, j, 1, l ) ) + c_im( ARR2D( a, j, 2, l ) );
+  400.    Vp          x1 = c_re( ARR2D( a, j, 0, l ) ) - c32 * x0;
+  401.    Vp          y1 = c_im( ARR2D( a, j, 0, l ) ) - c32 * y0;
+  402.    Vp          x2 = c31 * ( c_im( ARR2D( a, j, 1, l ) ) - c_im( ARR2D( a, j, 2, l ) ));
+  403.    Vp          y2 = c31 * ( c_re( ARR2D( a, j, 2, l ) ) - c_re( ARR2D( a, j, 1, l ) ));
+  404.    Vp          c_re( ARR2D( b, 0, j, 3 ) ) = c_re( ARR2D( a, j, 0, l ) ) + x0;
+  405.    Vp          c_im( ARR2D( b, 0, j, 3 ) ) = c_im( ARR2D( a, j, 0, l ) ) + y0;
+  406.    Vp          c_re( ARR2D( b, 1, j, 3 ) ) = wr1*(x1+x2)-wi1*(y1+y2);
+  407.    Vp          c_im( ARR2D( b, 1, j, 3 ) ) = wr1*(y1+y2)+wi1*(x1+x2);
+  408.    Vp          c_re( ARR2D( b, 2, j, 3 ) ) = wr2*(x1-x2)-wi2*(y1-y2);
+  409.    Vp          c_im( ARR2D( b, 2, j, 3 ) ) = wr2*(y1-y2)+wi2*(x1-x2);
+  410.    Vp---->   }
+  411.            }
+  412.            
+  413.            static void
+  414.            fft3b(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  415.              int i, j;
+  416.              double x0, x1, x2;
+  417.              double y0, y1, y2;
+  418.              double wr1, wr2;
+  419.              double wi1, wi2;
+  420.              double c31 = 0.86602540378443865, c32 = 0.5;
+  421.            
+  422.    Vp----<   for (i = 0; i < m; ++i) {
+  423.    Vp          x0 = c_re( ARR3D( a, i, 0, 1, m, l ) ) + c_re( ARR3D( a, i, 0, 2, m, l ) );
+  424.    Vp          y0 = c_im( ARR3D( a, i, 0, 1, m, l ) ) + c_im( ARR3D( a, i, 0, 2, m, l ) );
+  425.    Vp          x1 = c_re( ARR3D( a, i, 0, 0, m, l ) ) - c32 * x0;
+  426.    Vp          y1 = c_im( ARR3D( a, i, 0, 0, m, l ) ) - c32 * y0;
+  427.    Vp          x2 = c31 * (c_im( ARR3D( a, i, 0, 1, m, l ) ) - c_im( ARR3D( a, i, 0, 2, m, l ) ));
+  428.    Vp          y2 = c31 * (c_re( ARR3D( a, i, 0, 2, m, l ) ) - c_re( ARR3D( a, i, 0, 1, m, l ) ));
+  429.    Vp          c_re( ARR3D( b, i, 0, 0, m, 3 ) ) = c_re( ARR3D( a, i, 0, 0, m, l ) ) + x0;
+  430.    Vp          c_im( ARR3D( b, i, 0, 0, m, 3 ) ) = c_im( ARR3D( a, i, 0, 0, m, l ) ) + y0;
+  431.    Vp          c_re( ARR3D( b, i, 1, 0, m, 3 ) ) = x1 + x2;
+  432.    Vp          c_im( ARR3D( b, i, 1, 0, m, 3 ) ) = y1 + y2;
+  433.    Vp          c_re( ARR3D( b, i, 2, 0, m, 3 ) ) = x1 - x2;
+  434.    Vp          c_im( ARR3D( b, i, 2, 0, m, 3 ) ) = y1 - y2;
+  435.    Vp---->   }
+  436.            
+  437.  + 1-----<   for (j = 1; j < l; ++j) {
+  438.    1           wr1 = c_re( w[j] );
+  439.    1           wi1 = c_im( w[j] );
+  440.    1           wr2=wr1*wr1-wi1*wi1;
+  441.    1           wi2=wr1*wi1+wr1*wi1;
+  442.    1 Vp--<     for (i = 0; i < m; ++i) {
+  443.    1 Vp          x0 = c_re( ARR3D( a, i, j, 1, m, l ) ) + c_re( ARR3D( a, i, j, 2, m, l ) );
+  444.    1 Vp          y0 = c_im( ARR3D( a, i, j, 1, m, l ) ) + c_im( ARR3D( a, i, j, 2, m, l ) );
+  445.    1 Vp          x1 = c_re( ARR3D( a, i, j, 0, m, l ) ) - c32 * x0;
+  446.    1 Vp          y1 = c_im( ARR3D( a, i, j, 0, m, l ) ) - c32 * y0;
+  447.    1 Vp          x2 = c31 * (c_im( ARR3D( a, i, j, 1, m, l ) ) - c_im( ARR3D( a, i, j, 2, m, l ) ));
+  448.    1 Vp          y2 = c31 * (c_re( ARR3D( a, i, j, 2, m, l ) ) - c_re( ARR3D( a, i, j, 1, m, l ) ));
+  449.    1 Vp          c_re( ARR3D( b, i, 0, j, m, 3 ) ) = c_re( ARR3D( a, i, j, 0, m, l ) ) + x0;
+  450.    1 Vp          c_im( ARR3D( b, i, 0, j, m, 3 ) ) = c_im( ARR3D( a, i, j, 0, m, l ) ) + y0;
+  451.    1 Vp          c_re( ARR3D( b, i, 1, j, m, 3 ) ) = wr1*(x1+x2)-wi1*(y1+y2);
+  452.    1 Vp          c_im( ARR3D( b, i, 1, j, m, 3 ) ) = wr1*(y1+y2)+wi1*(x1+x2);
+  453.    1 Vp          c_re( ARR3D( b, i, 2, j, m, 3 ) ) = wr2*(x1-x2)-wi2*(y1-y2);
+  454.    1 Vp          c_im( ARR3D( b, i, 2, j, m, 3 ) ) = wr2*(y1-y2)+wi2*(x1-x2);
+  455.    1 Vp-->     }
+  456.    1----->   }
+  457.            }
+  458.            
+  459.            static void
+  460.            fft5a(fftw_complex *a, fftw_complex *b, fftw_complex *w, int l) {
+  461.              int j;
+  462.              double wr1, wr2, wr3, wr4;
+  463.              double wi1, wi2, wi3, wi4;
+  464.              double x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
+  465.              double y0, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10;
+  466.              double c51 = 0.95105651629515357, c52 = 0.61803398874989485;
+  467.              double c53 = 0.55901699437494742, c54 = 0.25;
+  468.            
+  469.    Vp----<   for (j = 0; j < l; ++j) {
+  470.    Vp          wr1 = c_re( w[j] );
+  471.    Vp          wi1 = c_im( w[j] );
+  472.    Vp          wr2=wr1*wr1-wi1*wi1;
+  473.    Vp          wi2=wr1*wi1+wr1*wi1;
+  474.    Vp          wr3=wr1*wr2-wi1*wi2;
+  475.    Vp          wi3=wr1*wi2+wi1*wr2;
+  476.    Vp          wr4=wr2*wr2-wi2*wi2;
+  477.    Vp          wi4=wr2*wi2+wr2*wi2;
+  478.    Vp          x0 = c_re( ARR2D( a, j, 1, l ) ) + c_re( ARR2D( a, j, 4, l ) );
+  479.    Vp          y0 = c_im( ARR2D( a, j, 1, l ) ) + c_im( ARR2D( a, j, 4, l ) );
+  480.    Vp          x1 = c_re( ARR2D( a, j, 2, l ) ) + c_re( ARR2D( a, j, 3, l ) );
+  481.    Vp          y1 = c_im( ARR2D( a, j, 2, l ) ) + c_im( ARR2D( a, j, 3, l ) );
+  482.    Vp          x2 = c51 * (c_re( ARR2D( a, j, 1, l ) ) - c_re( ARR2D( a, j, 4, l ) ));
+  483.    Vp          y2 = c51 * (c_im( ARR2D( a, j, 1, l ) ) - c_im( ARR2D( a, j, 4, l ) ));
+  484.    Vp          x3 = c51 * (c_re( ARR2D( a, j, 2, l ) ) - c_re( ARR2D( a, j, 3, l ) ));
+  485.    Vp          y3 = c51 * (c_im( ARR2D( a, j, 2, l ) ) - c_im( ARR2D( a, j, 3, l ) ));
+  486.    Vp          x4 = x0 + x1;
+  487.    Vp          y4 = y0 + y1;
+  488.    Vp          x5 = c53 * (x0-x1);
+  489.    Vp          y5 = c53 * (y0-y1);
+  490.    Vp          x6 = c_re( ARR2D( a, j, 0, l ) ) - c54 * x4;
+  491.    Vp          y6 = c_im( ARR2D( a, j, 0, l ) ) - c54 * y4;
+  492.    Vp          x7 = x6 + x5;
+  493.    Vp          y7 = y6 + y5;
+  494.    Vp          x8 = x6 - x5;
+  495.    Vp          y8 = y6 - y5;
+  496.    Vp          x9 = y2 + c52*y3;
+  497.    Vp          y9 = -x2 - c52*x3;
+  498.    Vp          x10 = c52*y2 - y3;
+  499.    Vp          y10 = x3 - c52*x2;
+  500.    Vp          c_re( ARR2D( b, 0, j, 5 ) ) = c_re( ARR2D( a, j, 0, l ) ) + x4;
+  501.    Vp          c_im( ARR2D( b, 0, j, 5 ) ) = c_im( ARR2D( a, j, 0, l ) ) + y4;
+  502.    Vp          c_re( ARR2D( b, 1, j, 5 ) ) = wr1 * (x7+x9) - wi1 * (y7+y9);
+  503.    Vp          c_im( ARR2D( b, 1, j, 5 ) ) = wr1 * (y7+y9) + wi1 * (x7+x9);
+  504.    Vp          c_re( ARR2D( b, 2, j, 5 ) ) = wr2 * (x8+x10) - wi2 * (y8+y10);
+  505.    Vp          c_im( ARR2D( b, 2, j, 5 ) ) = wr2 * (y8+y10) + wi2 * (x8+x10);
+  506.    Vp          c_re( ARR2D( b, 3, j, 5 ) ) = wr3 * (x8-x10) - wi3 * (y8-y10);
+  507.    Vp          c_im( ARR2D( b, 3, j, 5 ) ) = wr3 * (y8-y10) + wi3 * (x8-x10);
+  508.    Vp          c_re( ARR2D( b, 4, j, 5 ) ) = wr4 * (x7-x9) - wi4 * (y7-y9);
+  509.    Vp          c_im( ARR2D( b, 4, j, 5 ) ) = wr4 * (y7-y9) + wi4 * (x7-x9);
+  510.    Vp---->   }
+  511.            }
+  512.            
+  513.            static void
+  514.            fft5b(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  515.              int i, j;
+  516.              double x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
+  517.              double y0, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10;
+  518.              double wr1, wr2, wr3, wr4;
+  519.              double wi1, wi2, wi3, wi4;
+  520.              double c51 = 0.95105651629515357, c52 = 0.61803398874989485;
+  521.              double c53 = 0.55901699437494742, c54 = 0.25;
+  522.            
+  523.    Vp----<   for (i = 0; i < m; ++i) {
+  524.    Vp          x0 = c_re( ARR3D( a, i, 0, 1, m, l ) ) + c_re( ARR3D( a, i, 0, 4, m, l ) );
+  525.    Vp          y0 = c_im( ARR3D( a, i, 0, 1, m, l ) ) + c_im( ARR3D( a, i, 0, 4, m, l ) );
+  526.    Vp          x1 = c_re( ARR3D( a, i, 0, 2, m, l ) ) + c_re( ARR3D( a, i, 0, 3, m, l ) );
+  527.    Vp          y1 = c_im( ARR3D( a, i, 0, 2, m, l ) ) + c_im( ARR3D( a, i, 0, 3, m, l ) );
+  528.    Vp          x2 = c51 * (c_re( ARR3D( a, i, 0, 1, m, l ) ) - c_re( ARR3D( a, i, 0, 4, m, l ) ));
+  529.    Vp          y2 = c51 * (c_im( ARR3D( a, i, 0, 1, m, l ) ) - c_im( ARR3D( a, i, 0, 4, m, l ) ));
+  530.    Vp          x3 = c51 * (c_re( ARR3D( a, i, 0, 2, m, l ) ) - c_re( ARR3D( a, i, 0, 3, m, l ) ));
+  531.    Vp          y3 = c51 * (c_im( ARR3D( a, i, 0, 2, m, l ) ) - c_im( ARR3D( a, i, 0, 3, m, l ) ));
+  532.    Vp          x4 = x0 + x1;
+  533.    Vp          y4 = y0 + y1;
+  534.    Vp          x5 = c53 * (x0-x1);
+  535.    Vp          y5 = c53 * (y0-y1);
+  536.    Vp          x6 = c_re( ARR3D( a, i, 0, 0, m, l ) ) - c54 * x4;
+  537.    Vp          y6 = c_im( ARR3D( a, i, 0, 0, m, l ) ) - c54 * y4;
+  538.    Vp          x7 = x6 + x5;
+  539.    Vp          y7 = y6 + y5;
+  540.    Vp          x8 = x6 - x5;
+  541.    Vp          y8 = y6 - y5;
+  542.    Vp          x9 = y2 + c52 * y3;
+  543.    Vp          y9 = -x2 - c52 * x3;
+  544.    Vp          x10 = c52 * y2 - y3;
+  545.    Vp          y10 = x3 - c52 * x2;
+  546.    Vp          c_re( ARR3D( b, i, 0, 0, m, 5 ) ) = c_re( ARR3D( a, i, 0, 0, m, l ) ) + x4;
+  547.    Vp          c_im( ARR3D( b, i, 0, 0, m, 5 ) ) = c_im( ARR3D( a, i, 0, 0, m, l ) ) + y4;
+  548.    Vp          c_re( ARR3D( b, i, 1, 0, m, 5 ) ) = x7 + x9;
+  549.    Vp          c_im( ARR3D( b, i, 1, 0, m, 5 ) ) = y7 + y9;
+  550.    Vp          c_re( ARR3D( b, i, 2, 0, m, 5 ) ) = x8 + x10;
+  551.    Vp          c_im( ARR3D( b, i, 2, 0, m, 5 ) ) = y8 + y10;
+  552.    Vp          c_re( ARR3D( b, i, 3, 0, m, 5 ) ) = x8 - x10;
+  553.    Vp          c_im( ARR3D( b, i, 3, 0, m, 5 ) ) = y8 - y10;
+  554.    Vp          c_re( ARR3D( b, i, 4, 0, m, 5 ) ) = x7 - x9;
+  555.    Vp          c_im( ARR3D( b, i, 4, 0, m, 5 ) ) = y7 - y9;
+  556.    Vp---->   }
+  557.            
+  558.  + 1-----<   for (j = 1; j < l; ++j) {
+  559.    1           wr1 = c_re( w[j] );
+  560.    1           wi1 = c_im( w[j] );
+  561.    1           wr2 = wr1 * wr1 - wi1*wi1;
+  562.    1           wi2 = wr1 * wi1 + wr1*wi1;
+  563.    1           wr3 = wr1 * wr2 - wi1*wi2;
+  564.    1           wi3 = wr1 * wi2 + wi1*wr2;
+  565.    1           wr4 = wr2 * wr2 - wi2*wi2;
+  566.    1           wi4 = wr2 * wi2 + wr2*wi2;
+  567.    1 Vp--<     for (i = 0; i < m; ++i) {
+  568.    1 Vp          x0 = c_re( ARR3D( a, i, j, 1, m, l ) ) + c_re( ARR3D( a, i, j, 4, m, l ) );
+  569.    1 Vp          y0 = c_im( ARR3D( a, i, j, 1, m, l ) ) + c_im( ARR3D( a, i, j, 4, m, l ) );
+  570.    1 Vp          x1 = c_re( ARR3D( a, i, j, 2, m, l ) ) + c_re( ARR3D( a, i, j, 3, m, l ) );
+  571.    1 Vp          y1 = c_im( ARR3D( a, i, j, 2, m, l ) ) + c_im( ARR3D( a, i, j, 3, m, l ) );
+  572.    1 Vp          x2 = c51 * (c_re( ARR3D( a, i, j, 1, m, l ) ) - c_re( ARR3D( a, i, j, 4, m, l ) ));
+  573.    1 Vp          y2 = c51 * (c_im( ARR3D( a, i, j, 1, m, l ) ) - c_im( ARR3D( a, i, j, 4, m, l ) ));
+  574.    1 Vp          x3 = c51 * (c_re( ARR3D( a, i, j, 2, m, l ) ) - c_re( ARR3D( a, i, j, 3, m, l ) ));
+  575.    1 Vp          y3 = c51 * (c_im( ARR3D( a, i, j, 2, m, l ) ) - c_im( ARR3D( a, i, j, 3, m, l ) ));
+  576.    1 Vp          x4 = x0 + x1;
+  577.    1 Vp          y4 = y0 + y1;
+  578.    1 Vp          x5 = c53 * (x0-x1);
+  579.    1 Vp          y5 = c53 * (y0-y1);
+  580.    1 Vp          x6 = c_re( ARR3D( a, i, j, 0, m, l ) ) - c54*x4;
+  581.    1 Vp          y6 = c_im( ARR3D( a, i, j, 0, m, l ) ) - c54*y4;
+  582.    1 Vp          x7 = x6 + x5;
+  583.    1 Vp          y7 = y6 + y5;
+  584.    1 Vp          x8 = x6 - x5;
+  585.    1 Vp          y8 = y6 - y5;
+  586.    1 Vp          x9 = y2 + c52 * y3;
+  587.    1 Vp          y9 = -x2 - c52 * x3;
+  588.    1 Vp          x10 = c52*y2 - y3;
+  589.    1 Vp          y10 = x3 - c52*x2;
+  590.    1 Vp          c_re( ARR3D( b, i, 0, j, m, 5 ) ) = c_re( ARR3D( a, i, j, 0, m, l ) ) + x4;
+  591.    1 Vp          c_im( ARR3D( b, i, 0, j, m, 5 ) ) = c_im( ARR3D( a, i, j, 0, m, l ) ) + y4;
+  592.    1 Vp          c_re( ARR3D( b, i, 1, j, m, 5 ) ) = wr1*(x7+x9) - wi1*(y7+y9);
+  593.    1 Vp          c_im( ARR3D( b, i, 1, j, m, 5 ) ) = wr1*(y7+y9) + wi1*(x7+x9);
+  594.    1 Vp          c_re( ARR3D( b, i, 2, j, m, 5 ) ) = wr2*(x8+x10) - wi2*(y8+y10);
+  595.    1 Vp          c_im( ARR3D( b, i, 2, j, m, 5 ) ) = wr2*(y8+y10) + wi2*(x8+x10);
+  596.    1 Vp          c_re( ARR3D( b, i, 3, j, m, 5 ) ) = wr3*(x8-x10) - wi3*(y8-y10);
+  597.    1 Vp          c_im( ARR3D( b, i, 3, j, m, 5 ) ) = wr3*(y8-y10) + wi3*(x8-x10);
+  598.    1 Vp          c_re( ARR3D( b, i, 4, j, m, 5 ) ) = wr4*(x7-x9) - wi4*(y7-y9);
+  599.    1 Vp          c_im( ARR3D( b, i, 4, j, m, 5 ) ) = wr4*(y7-y9) + wi4*(x7-x9);
+  600.    1 Vp-->     }
+  601.    1----->   }
+  602.            }
+  603.            
+  604.            static void
+  605.            fft3(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  606.              if (1 == m)
+  607.  +             fft3a( a, b, w, l );
+  608.              else
+  609.  +             fft3b( a, b, w, m, l );
+  610.            }
+  611.            
+  612.            static void
+  613.            fft4(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  614.              if (1 == m)
+  615.  +             fft4a( a, b, w, l );
+  616.              else
+  617.  +             fft4b( a, b, w, m, l );
+  618.            }
+  619.            
+  620.            static void
+  621.            fft5(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  622.              if (1 == m)
+  623.  +             fft5a( a, b, w, l );
+  624.              else
+  625.  +             fft5b( a, b, w, m, l );
+  626.            }
+  627.            
+  628.            static void
+  629.            fft8(fftw_complex *a, fftw_complex *b, fftw_complex *w, int m, int l) {
+  630.              if (1 == m)
+  631.  +             fft8a( a, b, w, l );
+  632.              else
+  633.  +             fft8b( a, b, w, m, l );
+  634.            }
+  635.            
+  636.            int
+  637.            HPCC_fft235(fftw_complex *a, fftw_complex *b, fftw_complex *w, int n, const int *ip) {
+  638.              int j, k, l, m, key, kp4, kp8;
+  639.            
+  640.              if (ip[0] != 1) {
+  641.                kp4 = 2 - (ip[0] + 2) % 3;
+  642.                kp8 = (ip[0]-kp4) / 3;
+  643.              } else {
+  644.                kp4 = 0;
+  645.                kp8 = 0;
+  646.              }
+  647.            
+  648.              key = 1;
+  649.              j = 0;
+  650.              l = n;
+  651.              m = 1;
+  652.            
+  653.  + 1-----<   for (k = 0; k < kp8; ++k) {
+  654.    1           l >>= 3; /* divide by 8 */
+  655.    1       
+  656.    1           if (l >= 2) {
+  657.    1             if (key > 0)
+  658.  + 1               fft8( a, b, w + j, m, l );
+  659.    1             else
+  660.  + 1               fft8( b, a, w + j, m, l );
+  661.    1       
+  662.    1             key = -key;
+  663.    1           } else {
+  664.    1             if (key > 0)
+  665.  + 1               fft8( a, a, w + j, m, l );
+  666.    1             else
+  667.  + 1               fft8( b, a, w + j, m, l );
+  668.    1           }
+  669.    1           m <<= 3; /* multiply by 8 */
+  670.    1           j += l;
+  671.    1----->   }
+  672.            
+  673.  + 1-----<   for (k = 0; k < ip[2]; ++k) {
+  674.    1           l /= 5;
+  675.    1       
+  676.    1           if (l >= 2) {
+  677.    1             if (key > 0)
+  678.  + 1               fft5( a, b, w+j, m, l );
+  679.    1             else
+  680.  + 1               fft5( b, a, w+j, m, l );
+  681.    1       
+  682.    1             key = -key;
+  683.    1           } else {
+  684.    1             if (key > 0)
+  685.  + 1               fft5( a, a, w+j, m, l );
+  686.    1             else
+  687.  + 1               fft5( b, a, w+j, m, l );
+  688.    1           }
+  689.    1       
+  690.    1           m *= 5;
+  691.    1           j += l;
+  692.    1----->   }
+  693.            
+  694.  + 1-----<   for (k = 0; k < kp4; ++k) {
+  695.    1           l >>= 2; /* divide by 4 */
+  696.    1       
+  697.    1           if (l >= 2) {
+  698.    1             if (key > 0)
+  699.  + 1               fft4( a, b, w + j, m, l );
+  700.    1             else
+  701.  + 1               fft4( b, a, w + j, m, l );
+  702.    1       
+  703.    1             key = -key;
+  704.    1           } else {
+  705.    1             if (key > 0)
+  706.  + 1               fft4( a, a, w + j, m, l );
+  707.    1             else
+  708.  + 1               fft4( b, a, w + j, m, l );
+  709.    1           }
+  710.    1           m <<= 2; /* multiply by 4 */
+  711.    1           j += l;
+  712.    1----->   }
+  713.            
+  714.  + 1-----<   for (k = 0; k < ip[1]; ++k) {
+  715.    1           l /= 3;
+  716.    1       
+  717.    1           if (l >= 2) {
+  718.    1             if (key > 0)
+  719.  + 1               fft3( a, b, w+j, m, l );
+  720.    1             else
+  721.  + 1               fft3( b, a, w+j, m, l );
+  722.    1       
+  723.    1             key = -key;
+  724.    1           } else {
+  725.    1             if (key > 0)
+  726.  + 1               fft3( a, a, w+j, m, l );
+  727.    1             else
+  728.  + 1               fft3( b, a, w+j, m, l );
+  729.    1           }
+  730.    1       
+  731.    1           m *= 3;
+  732.    1           j += l;
+  733.    1----->   }
+  734.            
+  735.              if (ip[0] == 1) {
+  736.                if (key > 0)
+  737.  +               fft2( a, a, m );
+  738.                else
+  739.  +               fft2( b, a, m );
+  740.              }
+  741.            
+  742.              return 0;
+  743.            }
+  744.            
+  745.            static int
+  746.            settbl0(fftw_complex *w, int m, int l) {
+  747.              int i;
+  748.              double pi2, px;
+  749.            
+  750.              pi2 = 8.0 * atan(1.0);
+  751.              px = -pi2 / m / l;
+  752.            
+  753.  + r5----<   for (i = 0; i < l; ++i) {
+  754.  + r5          c_re(w[i]) = cos(px * i);
+  755.    r5          c_im(w[i]) = sin(px * i);
+  756.    r5---->   }
+  757.            
+  758.              return 0;
+  759.            }
+  760.            
+  761.            int
+  762.            HPCC_settbl(fftw_complex *w, int n) {
+  763.              int j, k, l, kp4, kp8;
+  764.              int ip[3];
+  765.            
+  766.  +           HPCC_factor235( n, ip );
+  767.            
+  768.              if (1 != ip[0]) {
+  769.                kp4 = 2 - (ip[0] + 2) % 3;
+  770.                kp8 = (ip[0]-kp4) / 3;
+  771.              } else {
+  772.                kp4 = 0;
+  773.                kp8 = 0;
+  774.              }
+  775.            
+  776.              j = 0;
+  777.              l = n;
+  778.            
+  779.  + 1-----<   for (k = 0; k < kp8; ++k) {
+  780.    1           l >>= 3; /* divide by 8 */
+  781.  + 1           settbl0( w + j, 8, l );
+  782.    1           j += l;
+  783.    1----->   }
+  784.            
+  785.  + 1-----<   for (k = 0; k < ip[2]; ++k) {
+  786.    1           l /= 5;
+  787.  + 1           settbl0( w + j, 5, l );
+  788.    1           j += l;
+  789.    1----->   }
+  790.            
+  791.  + 1-----<   for (k = 0; k < kp4; ++k) {
+  792.    1           l >>= 2; /* divide by 4 */
+  793.  + 1           settbl0( w + j, 4, l );
+  794.    1           j += l;
+  795.    1----->   }
+  796.            
+  797.  + 1-----<   for (k = 0; k < ip[1]; ++k) {
+  798.    1           l /= 3;
+  799.  + 1           settbl0( w + j, 3, l );
+  800.    1           j += l;
+  801.    1----->   }
+  802.            
+  803.              return 0;
+  804.            }	/* settbl */
+  805.            
+  806.            int
+  807.            HPCC_factor235(int n, int *ip) {
+  808.              ip[0] = ip[1] = ip[2] = 0;
+  809.            
+  810.              if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0)
+  811.                return 1;
+  812.            
+  813.              if (n <= 1)
+  814.                return 1;
+  815.            
+  816.              /* count all 2 factors */
+  817.  + 1-----<   for (; n > 1 && ! (n & 1); n >>= 1)
+  818.    1----->     ip[0]++;
+  819.            
+  820.              /* count all 3 factors */
+  821.  + 1-----<   for (; n > 1 && ! (n % 3); n /= 3)
+  822.    1----->     ip[1]++;
+  823.            
+  824.              /* count all 5 factors */
+  825.  + 1-----<   for (; n > 1 && ! (n % 5); n /= 5)
+  826.    1----->     ip[2]++;
+  827.            
+  828.              if (n != 1)
+  829.                return 1;
+  830.            
+  831.              return 0;
+  832.            }
+  833.            
+  834.            int
+  835.            HPCC_factor235_8(s64Int_t n, int *ip) {
+  836.              ip[0] = ip[1] = ip[2] = 0;
+  837.            
+  838.              if (n % 2 != 0 && n % 3 != 0 && n % 5 != 0)
+  839.                return 1;
+  840.            
+  841.              if (n <= 1)
+  842.                return 1;
+  843.            
+  844.              /* count all 2 factors */
+  845.  + 1-----<   for (; n > 1 && ! (n & 1); n >>= 1)
+  846.    1----->     ip[0]++;
+  847.            
+  848.              /* count all 3 factors */
+  849.  + 1-----<   for (; n > 1 && ! (n % 3); n /= 3)
+  850.    1----->     ip[1]++;
+  851.            
+  852.              /* count all 5 factors */
+  853.  + 1-----<   for (; n > 1 && ! (n % 5); n /= 5)
+  854.    1----->     ip[2]++;
+  855.            
+  856.              if (n != 1)
+  857.                return 1;
+  858.            
+  859.              return 0;
+  860.            }
+
+CC-6332 CC: VECTOR File = fft235.c, Line = 33 
+  A loop was not vectorized because it does not map well onto the target architecture.
+
+CC-6005 CC: SCALAR File = fft235.c, Line = 33 
+  A loop was unrolled 8 times.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 54 
+  A loop was partially vectorized.
+
+CC-6332 CC: VECTOR File = fft235.c, Line = 94 
+  A loop was not vectorized because it does not map well onto the target architecture.
+
+CC-6005 CC: SCALAR File = fft235.c, Line = 94 
+  A loop was unrolled 8 times.
+
+CC-6289 CC: VECTOR File = fft235.c, Line = 116 
+  A loop was not vectorized because a recurrence was found on "b" between lines 135 and 137.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 124 
+  A loop was partially vectorized.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 158 
+  A loop was partially vectorized.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 246 
+  A loop was partially vectorized.
+
+CC-6289 CC: VECTOR File = fft235.c, Line = 307 
+  A loop was not vectorized because a recurrence was found on "b" between lines 354 and 356.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 323 
+  A loop was partially vectorized.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 393 
+  A loop was partially vectorized.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 422 
+  A loop was partially vectorized.
+
+CC-6289 CC: VECTOR File = fft235.c, Line = 437 
+  A loop was not vectorized because a recurrence was found on "b" between lines 449 and 451.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 442 
+  A loop was partially vectorized.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 469 
+  A loop was partially vectorized.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 523 
+  A loop was partially vectorized.
+
+CC-6289 CC: VECTOR File = fft235.c, Line = 558 
+  A loop was not vectorized because a recurrence was found on "b" between lines 590 and 592.
+
+CC-6209 CC: VECTOR File = fft235.c, Line = 567 
+  A loop was partially vectorized.
+
+CC-3171 CC: IPA File = fft235.c, Line = 607 
+  "fft3a" (called from "fft3") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 609 
+  "fft3b" (called from "fft3") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 615 
+  "fft4a" (called from "fft4") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 617 
+  "fft4b" (called from "fft4") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 623 
+  "fft5a" (called from "fft5") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 625 
+  "fft5b" (called from "fft5") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 631 
+  "fft8a" (called from "fft8") was not inlined because it is not in the body of a loop.
+
+CC-3022 CC: IPA File = fft235.c, Line = 633 
+  "fft8b" (called from "fft8") was not inlined because too much text will get expanded inline. 
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 653 
+  A loop was not vectorized because it contains a call to function "fft8" on line 658.
+
+CC-3005 CC: IPA File = fft235.c, Line = 658 
+  "fft8" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 660 
+  "fft8" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 665 
+  "fft8" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 667 
+  "fft8" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 673 
+  A loop was not vectorized because it contains a call to function "fft5" on line 678.
+
+CC-3005 CC: IPA File = fft235.c, Line = 678 
+  "fft5" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 680 
+  "fft5" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 685 
+  "fft5" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 687 
+  "fft5" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 694 
+  A loop was not vectorized because it contains a call to function "fft4" on line 699.
+
+CC-3005 CC: IPA File = fft235.c, Line = 699 
+  "fft4" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 701 
+  "fft4" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 706 
+  "fft4" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 708 
+  "fft4" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 714 
+  A loop was not vectorized because it contains a call to function "fft3" on line 719.
+
+CC-3005 CC: IPA File = fft235.c, Line = 719 
+  "fft3" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 721 
+  "fft3" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 726 
+  "fft3" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3005 CC: IPA File = fft235.c, Line = 728 
+  "fft3" (called from "HPCC_fft235") was not inlined because the type of argument 3 does not match the corresponding type from the
+  routine definition - RESTRICT qualifiers differ.
+
+CC-3171 CC: IPA File = fft235.c, Line = 737 
+  "fft2" (called from "HPCC_fft235") was not inlined because it is not in the body of a loop.
+
+CC-3171 CC: IPA File = fft235.c, Line = 739 
+  "fft2" (called from "HPCC_fft235") was not inlined because it is not in the body of a loop.
+
+CC-6332 CC: VECTOR File = fft235.c, Line = 753 
+  A loop was not vectorized because it does not map well onto the target architecture.
+
+CC-6005 CC: SCALAR File = fft235.c, Line = 753 
+  A loop was unrolled 5 times.
+
+CC-6009 CC: SCALAR File = fft235.c, Line = 754 
+  A floating point expression involving an induction variable was strength reduced by optimization.  This may cause numerical
+  differences.
+
+CC-3005 CC: IPA File = fft235.c, Line = 766 
+  "HPCC_factor235" (called from "HPCC_settbl") was not inlined because the type of argument 2 does not match the corresponding type
+  from the routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 779 
+  A loop was not vectorized because it contains a call to function "settbl0" on line 781.
+
+CC-3005 CC: IPA File = fft235.c, Line = 781 
+  "settbl0" (called from "HPCC_settbl") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 785 
+  A loop was not vectorized because it contains a call to function "settbl0" on line 787.
+
+CC-3005 CC: IPA File = fft235.c, Line = 787 
+  "settbl0" (called from "HPCC_settbl") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 791 
+  A loop was not vectorized because it contains a call to function "settbl0" on line 793.
+
+CC-3005 CC: IPA File = fft235.c, Line = 793 
+  "settbl0" (called from "HPCC_settbl") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-6287 CC: VECTOR File = fft235.c, Line = 797 
+  A loop was not vectorized because it contains a call to function "settbl0" on line 799.
+
+CC-3005 CC: IPA File = fft235.c, Line = 799 
+  "settbl0" (called from "HPCC_settbl") was not inlined because the type of argument 1 does not match the corresponding type from
+  the routine definition - RESTRICT qualifiers differ.
+
+CC-6254 CC: VECTOR File = fft235.c, Line = 817 
+  A loop was not vectorized because a recurrence was found on "n" at line 817.
+
+CC-6254 CC: VECTOR File = fft235.c, Line = 821 
+  A loop was not vectorized because a recurrence was found on "n" at line 821.
+
+CC-6254 CC: VECTOR File = fft235.c, Line = 825 
+  A loop was not vectorized because a recurrence was found on "n" at line 825.
+
+CC-6254 CC: VECTOR File = fft235.c, Line = 845 
+  A loop was not vectorized because a recurrence was found on "n" at line 845.
+
+CC-6254 CC: VECTOR File = fft235.c, Line = 849 
+  A loop was not vectorized because a recurrence was found on "n" at line 849.
+
+CC-6254 CC: VECTOR File = fft235.c, Line = 853 
+  A loop was not vectorized because a recurrence was found on "n" at line 853.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

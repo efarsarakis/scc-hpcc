@@ -1,0 +1,272 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../RandomAccess/buckets.c
+Compiled : 2014-03-24  21:34:12
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../RandomAccess/buckets.o
+           -c ../../../../RandomAccess/buckets.c -I ../../../../include
+           -I ../../../include -I ../../../include/CrayX1 -D Add_
+           -D StringSunStyle -D F77_INTEGER=int -O 2 -h list=m
+           -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../RandomAccess/buckets.c
+Date     : 03/24/2014  21:34:13
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.           /* buckets.c
+    2.            *
+    3.            * Each process (PE) has a set of buckets, one for each possible
+    4.            * destination PE. Each set of buckets is implementated as an
+    5.            * array of objects, one for each destination PE, where each object
+    6.            * keeps the number of updates currently in the bucket and a pointer
+    7.            * to a list of updates.
+    8.            * The motivation for using lists (instead of fixed size buckets)
+    9.            * is to keep the memory requirements low as the number of processes
+   10.            * increase. To avoid the overheads of allocating memory dynamically,
+   11.            * a pool of memory is previously allocated and objetcs are
+   12.            * allocated/returned from/to this pool (see pool.c for details).
+   13.            *
+   14.            * An auxiliary data structure keeps the local buckets ordered
+   15.            * according to the number of updates of each bucket (see heap.c).
+   16.            *
+   17.            */
+   18.           
+   19.           
+   20.           #include <hpcc.h>
+   21.           #include "RandomAccess.h"
+   22.           #include "buckets.h"
+   23.           #include "heap.h"
+   24.           #include "pool.h"
+   25.           
+   26.           /* memory pool for updates */
+   27.           static POOL *Update_Pool;
+   28.           
+   29.           Bucket_Ptr HPCC_InitBuckets(int numPEs, int maxNumUpdates)
+   30.           {
+   31.             Bucket_Ptr Buckets;
+   32.             int i;
+   33.           
+   34.             Buckets = (Bucket_Ptr) malloc (numPEs * sizeof(Bucket_T));
+   35.  + r8---<   for (i=0; i<numPEs; i++) {
+   36.    r8         Buckets[i].numUpdates = 0;
+   37.    r8         Buckets[i].updateList = NULL_UPDATE_PTR;
+   38.    r8--->   }
+   39.           
+   40.             /* initialize memory pool for updates */
+   41.  +          Update_Pool = HPCC_PoolInit (maxNumUpdates, sizeof(Update_T));
+   42.           
+   43.             /* initialize heap of PE's with pending updates */
+   44.  +          HPCC_ra_Heap_Init(numPEs);
+   45.           
+   46.             return(Buckets);
+   47.           }
+   48.           
+   49.           
+   50.           void HPCC_InsertUpdate(u64Int ran, int pe, Bucket_Ptr Buckets)
+   51.           {
+   52.           
+   53.             Update_Ptr update;
+   54.             Bucket_Ptr bucket;
+   55.             int numUpdates;
+   56.           
+   57.             bucket = Buckets + pe; /* bucket = &(Buckets[pe]); */
+   58.  +          update = (Update_T*) HPCC_PoolGetObj(Update_Pool);
+   59.             update->value = ran;
+   60.             update->forward = bucket->updateList;
+   61.             bucket->updateList = update;
+   62.             bucket->numUpdates++;
+   63.           
+   64.             numUpdates = bucket->numUpdates;
+   65.             if (numUpdates == 1) {  /* this is the first update for this PE since last send */
+   66.  +            HPCC_ra_Heap_Insert (pe, numUpdates);
+   67.             }
+   68.             else { /* PE already in heap, just increment number of updates */
+   69.  +            HPCC_ra_Heap_IncrementKey(pe);
+   70.             }
+   71.           
+   72.           }
+   73.           
+   74.           
+   75.           
+   76.           int HPCC_GetUpdates(Bucket_Ptr Buckets, u64Int *bufferPtr, int bufferSize, int *peUpdates)
+   77.           {
+   78.           
+   79.             int pe;
+   80.             Bucket_Ptr bucket;
+   81.             Update_Ptr update, tmp;
+   82.             u64Int *buffer;
+   83.           
+   84.  +          HPCC_ra_Heap_ExtractMax (&pe, peUpdates);
+   85.             bucket = Buckets + pe; /* bucket = &(Buckets[pe]); */
+   86.           
+   87.             /* copy updates to buffer */
+   88.             update = bucket->updateList;
+   89.             buffer = bufferPtr;
+   90.  + 1----<   while (update != NULL_UPDATE_PTR) {
+   91.    1          *buffer = (u64Int)(update->value);
+   92.    1          buffer ++;
+   93.    1          tmp = update;
+   94.    1          update = update->forward;
+   95.  + 1          HPCC_PoolReturnObj(Update_Pool, tmp);
+   96.    1---->   }
+   97.           
+   98.             if (buffer - bufferPtr > bufferSize)
+   99.               buffer --;
+  100.           
+  101.             *peUpdates = bucket->numUpdates;
+  102.             bucket->numUpdates = 0;
+  103.             bucket->updateList = NULL_UPDATE_PTR;
+  104.           
+  105.             return(pe);
+  106.           
+  107.           }
+  108.           
+  109.           
+  110.           void HPCC_FreeBuckets (Bucket_Ptr Buckets, int numPEs)
+  111.           {
+  112.           
+  113.             Update_Ptr ptr1, ptr2;
+  114.             int i;
+  115.           
+  116.  +          HPCC_ra_Heap_Free();
+  117.           
+  118.  + 1----<   for (i = 0; i < numPEs; i ++) {
+  119.    1          ptr1 = Buckets[i].updateList;
+  120.  + 1 2--<     while (ptr1 != NULL_UPDATE_PTR) {
+  121.    1 2          ptr2 = ptr1;
+  122.    1 2          ptr1 = ptr1->forward;
+  123.  + 1 2          HPCC_PoolReturnObj(Update_Pool, ptr2);
+  124.    1 2-->     }
+  125.    1---->   }
+  126.           
+  127.  +          HPCC_PoolFree(Update_Pool);
+  128.             free(Update_Pool);
+  129.             free (Buckets);
+  130.           
+  131.           }
+
+CC-6332 CC: VECTOR File = buckets.c, Line = 35 
+  A loop was not vectorized because it does not map well onto the target architecture.
+
+CC-6005 CC: SCALAR File = buckets.c, Line = 35 
+  A loop was unrolled 8 times.
+
+CC-3021 CC: IPA File = buckets.c, Line = 41 
+  "HPCC_PoolInit" (called from "HPCC_InitBuckets") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 44 
+  "HPCC_ra_Heap_Init" (called from "HPCC_InitBuckets") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 58 
+  "HPCC_PoolGetObj" (called from "HPCC_InsertUpdate") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 66 
+  "HPCC_ra_Heap_Insert" (called from "HPCC_InsertUpdate") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 69 
+  "HPCC_ra_Heap_IncrementKey" (called from "HPCC_InsertUpdate") was not inlined because the compiler was unable to locate the
+  routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 84 
+  "HPCC_ra_Heap_ExtractMax" (called from "HPCC_GetUpdates") was not inlined because the compiler was unable to locate the routine.
+
+CC-6287 CC: VECTOR File = buckets.c, Line = 90 
+  A loop was not vectorized because it contains a call to function "HPCC_PoolReturnObj" on line 95.
+
+CC-3021 CC: IPA File = buckets.c, Line = 95 
+  "HPCC_PoolReturnObj" (called from "HPCC_GetUpdates") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 116 
+  "HPCC_ra_Heap_Free" (called from "HPCC_FreeBuckets") was not inlined because the compiler was unable to locate the routine.
+
+CC-6287 CC: VECTOR File = buckets.c, Line = 118 
+  A loop was not vectorized because it contains a call to function "HPCC_PoolReturnObj" on line 123.
+
+CC-6287 CC: VECTOR File = buckets.c, Line = 120 
+  A loop was not vectorized because it contains a call to function "HPCC_PoolReturnObj" on line 123.
+
+CC-3021 CC: IPA File = buckets.c, Line = 123 
+  "HPCC_PoolReturnObj" (called from "HPCC_FreeBuckets") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = buckets.c, Line = 127 
+  "HPCC_PoolFree" (called from "HPCC_FreeBuckets") was not inlined because the compiler was unable to locate the routine.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

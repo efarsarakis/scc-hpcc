@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../src/extfinalize.c
+Compiled : 2014-03-24  21:35:07
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../src/extfinalize.o -c ../../../../src/extfinalize.c
+           -I ../../../../include -I ../../../include
+           -I ../../../include/CrayX1 -D Add_ -D StringSunStyle
+           -D F77_INTEGER=int -O 2 -h list=m -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../src/extfinalize.c
+Date     : 03/24/2014  21:35:08
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     There are no optimizations or loops to mark
+
+
+    1.    /*
+    2.     This routine is called right before MPI_Finalize() and allows finalization
+    3.     of external software and hardware components. It can be replaced
+    4.     at the time of installation. A sample implemenation may finialize
+    5.     proprietary computational and communication libraries.
+    6.     The parameter "extdata" points to an object of size of a pointer.
+    7.     "extdata" comes from HPCC_external_init().
+    8.     Upon success, the function should return 0.
+    9.     */
+   10.    int
+   11.    HPCC_external_finalize(int argc, char *argv[], void *extdata) {
+   12.      return 0;
+   13.    }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

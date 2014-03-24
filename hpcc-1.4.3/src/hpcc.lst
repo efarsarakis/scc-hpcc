@@ -1,0 +1,1160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../src/hpcc.c
+Compiled : 2014-03-24  21:35:06
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../src/hpcc.o -c ../../../../src/hpcc.c
+           -I ../../../../include -I ../../../include
+           -I ../../../include/CrayX1 -D Add_ -D StringSunStyle
+           -D F77_INTEGER=int -O 2 -h list=m -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../src/hpcc.c
+Date     : 03/24/2014  21:35:06
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.     /* -*- mode: C; tab-width: 2; indent-tabs-mode: nil; fill-column: 79; coding: iso-latin-1-unix -*- */
+    2.     /*
+    3.       hpcc.c
+    4.     */
+    5.     
+    6.     #include <hpcc.h>
+    7.     #include <ctype.h>
+    8.     
+    9.     int
+   10.     main(int argc, char *argv[]) {
+   11.       int myRank, commSize;
+   12.       char *outFname;
+   13.       FILE *outputFile;
+   14.       HPCC_Params params;
+   15.       time_t currentTime;
+   16.       void *extdata;
+   17.     
+   18.  +    MPI_Init( &argc, &argv );
+   19.     
+   20.  +    if (HPCC_external_init( argc, argv, &extdata ))
+   21.         goto hpcc_end;
+   22.     
+   23.  +    if (HPCC_Init( &params ))
+   24.         goto hpcc_end;
+   25.     
+   26.  +    MPI_Comm_size( MPI_COMM_WORLD, &commSize );
+   27.  +    MPI_Comm_rank( MPI_COMM_WORLD, &myRank );
+   28.     
+   29.       outFname = params.outFname;
+   30.     
+   31.       /* -------------------------------------------------- */
+   32.       /*                 MPI RandomAccess                   */
+   33.       /* -------------------------------------------------- */
+   34.     
+   35.  +    MPI_Barrier( MPI_COMM_WORLD );
+   36.     
+   37.  +    BEGIN_IO( myRank, outFname, outputFile);
+   38.  +    fprintf( outputFile, "Begin of MPIRandomAccess section.\n" );
+   39.  +    END_IO( myRank, outputFile );
+   40.     
+   41.  +    if (params.RunMPIRandomAccess) HPCC_MPIRandomAccess( &params );
+   42.     
+   43.  +    time( &currentTime );
+   44.  +    BEGIN_IO(myRank, outFname, outputFile);
+   45.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+   46.  +    fprintf( outputFile, "End of MPIRandomAccess section.\n" );
+   47.  +    END_IO( myRank, outputFile );
+   48.     
+   49.       /* -------------------------------------------------- */
+   50.       /*                  StarRandomAccess                  */
+   51.       /* -------------------------------------------------- */
+   52.     
+   53.  +    MPI_Barrier( MPI_COMM_WORLD );
+   54.     
+   55.  +    BEGIN_IO( myRank, outFname, outputFile);
+   56.  +    fprintf( outputFile, "Begin of StarRandomAccess section.\n" );
+   57.  +    END_IO( myRank, outputFile );
+   58.     
+   59.  +    if (params.RunStarRandomAccess) HPCC_StarRandomAccess( &params );
+   60.     
+   61.  +    time( &currentTime );
+   62.  +    BEGIN_IO( myRank, outFname, outputFile);
+   63.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+   64.  +    fprintf( outputFile, "End of StarRandomAccess section.\n" );
+   65.  +    END_IO( myRank, outputFile );
+   66.     
+   67.       /* -------------------------------------------------- */
+   68.       /*                 SingleRandomAccess                 */
+   69.       /* -------------------------------------------------- */
+   70.     
+   71.  +    MPI_Barrier( MPI_COMM_WORLD );
+   72.     
+   73.  +    BEGIN_IO( myRank, outFname, outputFile);
+   74.  +    fprintf( outputFile, "Begin of SingleRandomAccess section.\n" );
+   75.  +    END_IO( myRank, outputFile );
+   76.     
+   77.  +    if (params.RunSingleRandomAccess) HPCC_SingleRandomAccess( &params );
+   78.     
+   79.  +    time( &currentTime );
+   80.  +    BEGIN_IO( myRank, outFname, outputFile);
+   81.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+   82.  +    fprintf( outputFile, "End of SingleRandomAccess section.\n" );
+   83.  +    END_IO( myRank, outputFile );
+   84.     
+   85.       /* -------------------------------------------------- */
+   86.       /*                 MPI RandomAccess LCG               */
+   87.       /* -------------------------------------------------- */
+   88.     
+   89.  +    MPI_Barrier( MPI_COMM_WORLD );
+   90.     
+   91.  +    BEGIN_IO( myRank, outFname, outputFile);
+   92.  +    fprintf( outputFile, "Begin of MPIRandomAccess_LCG section.\n" );
+   93.  +    END_IO( myRank, outputFile );
+   94.     
+   95.  +    if (params.RunMPIRandomAccess_LCG) HPCC_MPIRandomAccess_LCG( &params );
+   96.     
+   97.  +    time( &currentTime );
+   98.  +    BEGIN_IO(myRank, outFname, outputFile);
+   99.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  100.  +    fprintf( outputFile, "End of MPIRandomAccess_LCG section.\n" );
+  101.  +    END_IO( myRank, outputFile );
+  102.     
+  103.       /* -------------------------------------------------- */
+  104.       /*                  StarRandomAccess LCG              */
+  105.       /* -------------------------------------------------- */
+  106.     
+  107.  +    MPI_Barrier( MPI_COMM_WORLD );
+  108.     
+  109.  +    BEGIN_IO( myRank, outFname, outputFile);
+  110.  +    fprintf( outputFile, "Begin of StarRandomAccess_LCG section.\n" );
+  111.  +    END_IO( myRank, outputFile );
+  112.     
+  113.  +    if (params.RunStarRandomAccess_LCG) HPCC_StarRandomAccess_LCG( &params );
+  114.     
+  115.  +    time( &currentTime );
+  116.  +    BEGIN_IO( myRank, outFname, outputFile);
+  117.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  118.  +    fprintf( outputFile, "End of StarRandomAccess_LCG section.\n" );
+  119.  +    END_IO( myRank, outputFile );
+  120.     
+  121.       /* -------------------------------------------------- */
+  122.       /*                 SingleRandomAccess LCG             */
+  123.       /* -------------------------------------------------- */
+  124.     
+  125.  +    MPI_Barrier( MPI_COMM_WORLD );
+  126.     
+  127.  +    BEGIN_IO( myRank, outFname, outputFile);
+  128.  +    fprintf( outputFile, "Begin of SingleRandomAccess_LCG section.\n" );
+  129.  +    END_IO( myRank, outputFile );
+  130.     
+  131.  +    if (params.RunSingleRandomAccess_LCG) HPCC_SingleRandomAccess_LCG( &params );
+  132.     
+  133.  +    time( &currentTime );
+  134.  +    BEGIN_IO( myRank, outFname, outputFile);
+  135.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  136.  +    fprintf( outputFile, "End of SingleRandomAccess_LCG section.\n" );
+  137.  +    END_IO( myRank, outputFile );
+  138.     
+  139.       /* -------------------------------------------------- */
+  140.       /*                       PTRANS                       */
+  141.       /* -------------------------------------------------- */
+  142.     
+  143.  +    MPI_Barrier( MPI_COMM_WORLD );
+  144.     
+  145.  +    BEGIN_IO( myRank, outFname, outputFile);
+  146.  +    fprintf( outputFile, "Begin of PTRANS section.\n" );
+  147.  +    END_IO( myRank, outputFile );
+  148.     
+  149.  +    if (params.RunPTRANS) PTRANS( &params );
+  150.     
+  151.  +    time( &currentTime );
+  152.  +    BEGIN_IO( myRank, outFname, outputFile);
+  153.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  154.  +    fprintf( outputFile, "End of PTRANS section.\n" );
+  155.  +    END_IO( myRank, outputFile );
+  156.     
+  157.       /* -------------------------------------------------- */
+  158.       /*                    StarDGEMM                       */
+  159.       /* -------------------------------------------------- */
+  160.     
+  161.  +    MPI_Barrier( MPI_COMM_WORLD );
+  162.     
+  163.  +    BEGIN_IO( myRank, outFname, outputFile);
+  164.  +    fprintf( outputFile, "Begin of StarDGEMM section.\n" );
+  165.  +    END_IO( myRank, outputFile );
+  166.     
+  167.  +    if (params.RunStarDGEMM) HPCC_StarDGEMM( &params );
+  168.     
+  169.  +    time( &currentTime );
+  170.  +    BEGIN_IO( myRank, outFname, outputFile);
+  171.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  172.  +    fprintf( outputFile, "End of StarDGEMM section.\n" );
+  173.  +    END_IO( myRank, outputFile );
+  174.     
+  175.       /* -------------------------------------------------- */
+  176.       /*                    SingleDGEMM                     */
+  177.       /* -------------------------------------------------- */
+  178.     
+  179.  +    MPI_Barrier( MPI_COMM_WORLD );
+  180.     
+  181.  +    BEGIN_IO( myRank, outFname, outputFile);
+  182.  +    fprintf( outputFile, "Begin of SingleDGEMM section.\n" );
+  183.  +    END_IO( myRank, outputFile );
+  184.     
+  185.  +    if (params.RunSingleDGEMM) HPCC_SingleDGEMM( &params );
+  186.     
+  187.  +    time( &currentTime );
+  188.  +    BEGIN_IO( myRank, outFname, outputFile);
+  189.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  190.  +    fprintf( outputFile, "End of SingleDGEMM section.\n" );
+  191.  +    END_IO( myRank, outputFile );
+  192.     
+  193.       /* -------------------------------------------------- */
+  194.       /*                    StarSTREAM                      */
+  195.       /* -------------------------------------------------- */
+  196.     
+  197.  +    MPI_Barrier( MPI_COMM_WORLD );
+  198.     
+  199.  +    BEGIN_IO( myRank, outFname, outputFile);
+  200.  +    fprintf( outputFile, "Begin of StarSTREAM section.\n" );
+  201.  +    END_IO( myRank, outputFile );
+  202.     
+  203.  +    if (params.RunStarStream) HPCC_StarStream( &params );
+  204.     
+  205.  +    time( &currentTime );
+  206.  +    BEGIN_IO( myRank, outFname, outputFile);
+  207.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  208.  +    fprintf( outputFile, "End of StarSTREAM section.\n" );
+  209.  +    END_IO( myRank, outputFile );
+  210.     
+  211.       /* -------------------------------------------------- */
+  212.       /*                    SingleSTREAM                    */
+  213.       /* -------------------------------------------------- */
+  214.     
+  215.  +    MPI_Barrier( MPI_COMM_WORLD );
+  216.     
+  217.  +    BEGIN_IO( myRank, outFname, outputFile);
+  218.  +    fprintf( outputFile, "Begin of SingleSTREAM section.\n" );
+  219.  +    END_IO( myRank, outputFile );
+  220.     
+  221.  +    if (params.RunSingleStream) HPCC_SingleStream( &params );
+  222.     
+  223.  +    time( &currentTime );
+  224.  +    BEGIN_IO( myRank, outFname, outputFile);
+  225.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  226.  +    fprintf( outputFile, "End of SingleSTREAM section.\n" );
+  227.  +    END_IO( myRank, outputFile );
+  228.     
+  229.       /* -------------------------------------------------- */
+  230.       /*                       MPIFFT                       */
+  231.       /* -------------------------------------------------- */
+  232.     
+  233.  +    MPI_Barrier( MPI_COMM_WORLD );
+  234.     
+  235.  +    BEGIN_IO( myRank, outFname, outputFile);
+  236.  +    fprintf( outputFile, "Begin of MPIFFT section.\n" );
+  237.  +    END_IO( myRank, outputFile );
+  238.     
+  239.  +    if (params.RunMPIFFT) HPCC_MPIFFT( &params );
+  240.     
+  241.  +    time( &currentTime );
+  242.  +    BEGIN_IO( myRank, outFname, outputFile);
+  243.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  244.  +    fprintf( outputFile, "End of MPIFFT section.\n" );
+  245.  +    END_IO( myRank, outputFile );
+  246.     
+  247.       /* -------------------------------------------------- */
+  248.       /*                      StarFFT                       */
+  249.       /* -------------------------------------------------- */
+  250.     
+  251.  +    MPI_Barrier( MPI_COMM_WORLD );
+  252.     
+  253.  +    BEGIN_IO( myRank, outFname, outputFile);
+  254.  +    fprintf( outputFile, "Begin of StarFFT section.\n" );
+  255.  +    END_IO( myRank, outputFile );
+  256.     
+  257.  +    if (params.RunStarFFT) HPCC_StarFFT( &params );
+  258.     
+  259.  +    time( &currentTime );
+  260.  +    BEGIN_IO( myRank, outFname, outputFile);
+  261.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  262.  +    fprintf( outputFile, "End of StarFFT section.\n" );
+  263.  +    END_IO( myRank, outputFile );
+  264.     
+  265.       /* -------------------------------------------------- */
+  266.       /*                      SingleFFT                     */
+  267.       /* -------------------------------------------------- */
+  268.     
+  269.  +    MPI_Barrier( MPI_COMM_WORLD );
+  270.     
+  271.  +    BEGIN_IO( myRank, outFname, outputFile);
+  272.  +    fprintf( outputFile, "Begin of SingleFFT section.\n" );
+  273.  +    END_IO( myRank, outputFile );
+  274.     
+  275.  +    if (params.RunSingleFFT) HPCC_SingleFFT( &params );
+  276.     
+  277.  +    time( &currentTime );
+  278.  +    BEGIN_IO( myRank, outFname, outputFile);
+  279.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  280.  +    fprintf( outputFile, "End of SingleFFT section.\n" );
+  281.  +    END_IO( myRank, outputFile );
+  282.     
+  283.       /* -------------------------------------------------- */
+  284.       /*                  Latency/Bandwidth                 */
+  285.       /* -------------------------------------------------- */
+  286.     
+  287.  +    MPI_Barrier( MPI_COMM_WORLD );
+  288.     
+  289.  +    BEGIN_IO( myRank, outFname, outputFile);
+  290.  +    fprintf( outputFile, "Begin of LatencyBandwidth section.\n" );
+  291.  +    END_IO( myRank, outputFile );
+  292.     
+  293.  +    if (params.RunLatencyBandwidth) main_bench_lat_bw( &params );
+  294.     
+  295.  +    time( &currentTime );
+  296.  +    BEGIN_IO( myRank, outFname, outputFile);
+  297.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  298.  +    fprintf( outputFile, "End of LatencyBandwidth section.\n" );
+  299.  +    END_IO( myRank, outputFile );
+  300.     
+  301.       /* -------------------------------------------------- */
+  302.       /*                        HPL                         */
+  303.       /* -------------------------------------------------- */
+  304.     
+  305.  +    BEGIN_IO( myRank, outFname, outputFile);
+  306.  +    fprintf( outputFile, "Begin of HPL section.\n" );
+  307.  +    END_IO( myRank, outputFile );
+  308.     
+  309.  +    if (params.RunHPL) HPL_main( argc, argv, &params.HPLrdata, &params.Failure );
+  310.     
+  311.  +    time( &currentTime );
+  312.  +    BEGIN_IO( myRank, outFname, outputFile);
+  313.  +    fprintf( outputFile,"Current time (%ld) is %s\n",(long)currentTime,ctime(&currentTime));
+  314.  +    fprintf( outputFile, "End of HPL section.\n" );
+  315.  +    END_IO( myRank, outputFile );
+  316.     
+  317.       hpcc_end:
+  318.     
+  319.  +    HPCC_Finalize( &params );
+  320.     
+  321.  +    HPCC_external_finalize( argc, argv, extdata );
+  322.     
+  323.  +    MPI_Finalize();
+  324.       return 0;
+  325.     }
+
+CC-3021 CC: IPA File = hpcc.c, Line = 18 
+  "MPI_Init" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 20 
+  "HPCC_external_init" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 23 
+  "HPCC_Init" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 26 
+  "MPI_Comm_size" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 27 
+  "MPI_Comm_rank" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 35 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 37 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 37 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 38 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 39 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 39 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 41 
+  "HPCC_MPIRandomAccess" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 43 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 44 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 44 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 45 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 45 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 46 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 47 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 47 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 53 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 55 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 55 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 56 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 57 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 57 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 59 
+  "HPCC_StarRandomAccess" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 61 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 62 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 62 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 63 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 63 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 64 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 65 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 65 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 71 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 73 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 73 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 74 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 75 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 75 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 77 
+  "HPCC_SingleRandomAccess" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 79 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 80 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 80 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 81 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 81 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 82 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 83 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 83 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 89 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 91 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 91 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 92 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 93 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 93 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 95 
+  "HPCC_MPIRandomAccess_LCG" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 97 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 98 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 98 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 99 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 99 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 100 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 101 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 101 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 107 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 109 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 109 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 110 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 111 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 111 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 113 
+  "HPCC_StarRandomAccess_LCG" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 115 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 116 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 116 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 117 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 117 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 118 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 119 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 119 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 125 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 127 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 127 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 128 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 129 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 129 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 131 
+  "HPCC_SingleRandomAccess_LCG" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 133 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 134 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 134 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 135 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 135 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 136 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 137 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 137 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 143 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 145 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 145 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 146 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 147 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 147 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 149 
+  "PTRANS" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 151 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 152 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 152 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 153 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 153 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 154 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 155 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 155 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 161 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 163 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 163 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 164 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 165 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 165 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 167 
+  "HPCC_StarDGEMM" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 169 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 170 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 170 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 171 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 171 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 172 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 173 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 173 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 179 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 181 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 181 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 182 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 183 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 183 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 185 
+  "HPCC_SingleDGEMM" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 187 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 188 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 188 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 189 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 189 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 190 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 191 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 191 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 197 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 199 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 199 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 200 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 201 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 201 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 203 
+  "HPCC_StarStream" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 205 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 206 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 206 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 207 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 207 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 208 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 209 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 209 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 215 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 217 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 217 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 218 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 219 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 219 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 221 
+  "HPCC_SingleStream" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 223 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 224 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 224 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 225 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 225 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 226 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 227 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 227 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 233 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 235 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 235 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 236 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 237 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 237 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 239 
+  "HPCC_MPIFFT" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 241 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 242 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 242 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 243 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 243 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 244 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 245 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 245 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 251 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 253 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 253 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 254 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 255 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 255 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 257 
+  "HPCC_StarFFT" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 259 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 260 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 260 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 261 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 261 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 262 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 263 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 263 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 269 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 271 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 271 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 272 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 273 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 273 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 275 
+  "HPCC_SingleFFT" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 277 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 278 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 278 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 279 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 279 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 280 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 281 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 281 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 287 
+  "MPI_Barrier" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 289 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 289 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 290 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 291 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 291 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 293 
+  "main_bench_lat_bw" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 295 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 296 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 296 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 297 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 297 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 298 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 299 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 299 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 305 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 305 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 306 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 307 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 307 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 309 
+  "HPL_main" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 311 
+  "time" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 312 
+  "fopen" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 312 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 313 
+  "ctime" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 313 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 314 
+  "fprintf" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 315 
+  "fflush" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 315 
+  "fclose" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 319 
+  "HPCC_Finalize" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 321 
+  "HPCC_external_finalize" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = hpcc.c, Line = 323 
+  "MPI_Finalize" (called from "main") was not inlined because the compiler was unable to locate the routine.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

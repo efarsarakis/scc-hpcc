@@ -1,0 +1,306 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../src/grid/HPL_reduce.c
+Compiled : 2014-03-24  21:32:28
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../src/grid/HPL_reduce.o -c ../../../src/grid/HPL_reduce.c
+           -I ../../../include -I ../../../include/CrayX1 -D Add_
+           -D StringSunStyle -D F77_INTEGER=int -O 2 -h list=m
+           -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../src/grid/HPL_reduce.c
+Date     : 03/24/2014  21:32:29
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.          /* 
+    2.           * -- High Performance Computing Linpack Benchmark (HPL)                
+    3.           *    HPL - 2.0 - September 10, 2008                          
+    4.           *    Antoine P. Petitet                                                
+    5.           *    University of Tennessee, Knoxville                                
+    6.           *    Innovative Computing Laboratory                                 
+    7.           *    (C) Copyright 2000-2008 All Rights Reserved                       
+    8.           *                                                                      
+    9.           * -- Copyright notice and Licensing terms:                             
+   10.           *                                                                      
+   11.           * Redistribution  and  use in  source and binary forms, with or without
+   12.           * modification, are  permitted provided  that the following  conditions
+   13.           * are met:                                                             
+   14.           *                                                                      
+   15.           * 1. Redistributions  of  source  code  must retain the above copyright
+   16.           * notice, this list of conditions and the following disclaimer.        
+   17.           *                                                                      
+   18.           * 2. Redistributions in binary form must reproduce  the above copyright
+   19.           * notice, this list of conditions,  and the following disclaimer in the
+   20.           * documentation and/or other materials provided with the distribution. 
+   21.           *                                                                      
+   22.           * 3. All  advertising  materials  mentioning  features  or  use of this
+   23.           * software must display the following acknowledgement:                 
+   24.           * This  product  includes  software  developed  at  the  University  of
+   25.           * Tennessee, Knoxville, Innovative Computing Laboratory.             
+   26.           *                                                                      
+   27.           * 4. The name of the  University,  the name of the  Laboratory,  or the
+   28.           * names  of  its  contributors  may  not  be used to endorse or promote
+   29.           * products  derived   from   this  software  without  specific  written
+   30.           * permission.                                                          
+   31.           *                                                                      
+   32.           * -- Disclaimer:                                                       
+   33.           *                                                                      
+   34.           * THIS  SOFTWARE  IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+   35.           * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,  INCLUDING,  BUT NOT
+   36.           * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+   37.           * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE UNIVERSITY
+   38.           * OR  CONTRIBUTORS  BE  LIABLE FOR ANY  DIRECT,  INDIRECT,  INCIDENTAL,
+   39.           * SPECIAL,  EXEMPLARY,  OR  CONSEQUENTIAL DAMAGES  (INCLUDING,  BUT NOT
+   40.           * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+   41.           * DATA OR PROFITS; OR BUSINESS INTERRUPTION)  HOWEVER CAUSED AND ON ANY
+   42.           * THEORY OF LIABILITY, WHETHER IN CONTRACT,  STRICT LIABILITY,  OR TORT
+   43.           * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+   44.           * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+   45.           * ---------------------------------------------------------------------
+   46.           */ 
+   47.          /*
+   48.           * Include files
+   49.           */
+   50.          #include "hpl.h"
+   51.          
+   52.          #ifdef HPL_STDC_HEADERS
+   53.          int HPL_reduce
+   54.          (
+   55.             void *                           BUFFER,
+   56.             const int                        COUNT,
+   57.             const HPL_T_TYPE                 DTYPE,
+   58.             const HPL_T_OP                   OP,
+   59.             const int                        ROOT,
+   60.             MPI_Comm                         COMM
+   61.          )
+   62.          #else
+   63.          int HPL_reduce
+   64.          ( BUFFER, COUNT, DTYPE, OP, ROOT, COMM )
+   65.             void *                           BUFFER;
+   66.             const int                        COUNT;
+   67.             const HPL_T_TYPE                 DTYPE;
+   68.             const HPL_T_OP                   OP;
+   69.             const int                        ROOT;
+   70.             MPI_Comm                         COMM;
+   71.          #endif
+   72.          {
+   73.          /* 
+   74.           * Purpose
+   75.           * =======
+   76.           *
+   77.           * HPL_reduce performs a global reduce operation across all processes of
+   78.           * a group.  Note that the input buffer is  used as workarray and in all
+   79.           * processes but the accumulating process corrupting the original data.
+   80.           *
+   81.           * Arguments
+   82.           * =========
+   83.           *
+   84.           * BUFFER  (local input/output)          void *
+   85.           *         On entry,  BUFFER  points to  the  buffer to be  reduced.  On
+   86.           *         exit,  and  in process of rank  ROOT  this array contains the
+   87.           *         reduced data.  This  buffer  is also used as workspace during
+   88.           *         the operation in the other processes of the group.
+   89.           *
+   90.           * COUNT   (global input)                const int
+   91.           *         On entry,  COUNT  indicates the number of entries in  BUFFER.
+   92.           *         COUNT must be at least zero.
+   93.           *
+   94.           * DTYPE   (global input)                const HPL_T_TYPE
+   95.           *         On entry,  DTYPE  specifies the type of the buffers operands.
+   96.           *
+   97.           * OP      (global input)                const HPL_T_OP 
+   98.           *         On entry, OP is a pointer to the local combine function.
+   99.           *
+  100.           * ROOT    (global input)                const int
+  101.           *         On entry, ROOT is the coordinate of the accumulating process.
+  102.           *
+  103.           * COMM    (global/local input)          MPI_Comm
+  104.           *         The MPI communicator identifying the process collection.
+  105.           *
+  106.           * ---------------------------------------------------------------------
+  107.           */ 
+  108.          /*
+  109.           * .. Local Variables ..
+  110.           */
+  111.             MPI_Status                 status;
+  112.             void                       * buffer = NULL;
+  113.             int                        hplerr=MPI_SUCCESS, d=1, i, ip2=1, mask=0,
+  114.                                        mpierr, mydist, partner, rank, size, 
+  115.                                        tag = MSGID_BEGIN_COLL;
+  116.          /* ..
+  117.           * .. Executable Statements ..
+  118.           */
+  119.             if( COUNT <= 0 ) return( MPI_SUCCESS );
+  120.  +          mpierr = MPI_Comm_size( COMM, &size );
+  121.             if( size  == 1 ) return( MPI_SUCCESS );
+  122.  +          mpierr = MPI_Comm_rank( COMM, &rank );
+  123.  + 1--<>    i = size - 1; while( i > 1 ) { i >>= 1; d++; }
+  124.          
+  125.             if( DTYPE == HPL_INT )
+  126.                buffer = (void *)( (int *)   malloc( (size_t)(COUNT) * 
+  127.                                                     sizeof( int    ) ) );
+  128.             else
+  129.                buffer = (void *)( (double *)malloc( (size_t)(COUNT) *
+  130.                                                     sizeof( double ) ) );
+  131.          
+  132.             if( !( buffer ) )
+  133.  +          { HPL_pabort( __LINE__, "HPL_reduce", "Memory allocation failed" ); }
+  134.          
+  135.             if( ( mydist = MModSub( rank, ROOT, size ) ) == 0 )
+  136.             {
+  137.  + 1---<       do
+  138.    1           {
+  139.  + 1              mpierr = MPI_Recv( buffer, COUNT, HPL_2_MPI_TYPE( DTYPE ),
+  140.    1                                 MModAdd( ROOT, ip2, size ), tag, COMM,
+  141.    1                                 &status );
+  142.    1              if( mpierr != MPI_SUCCESS ) hplerr = mpierr;
+  143.  + 1              OP( COUNT, buffer, BUFFER, DTYPE );
+  144.    1              ip2 <<= 1; d--;
+  145.    1--->       } while( d );
+  146.             }
+  147.             else
+  148.             {
+  149.  + 1---<       do
+  150.    1           {
+  151.    1              if( ( mydist & mask ) == 0 )
+  152.    1              {
+  153.    1                 partner = mydist ^ ip2;
+  154.    1     
+  155.    1                 if( mydist & ip2 )
+  156.    1                 {
+  157.    1                    partner = MModAdd( ROOT, partner, size );
+  158.  + 1                    mpierr = MPI_Send( BUFFER, COUNT, HPL_2_MPI_TYPE( DTYPE ),
+  159.    1                                       partner, tag, COMM );
+  160.    1                 }
+  161.    1                 else if( partner < size )
+  162.    1                 {
+  163.    1                    partner = MModAdd( ROOT, partner, size );
+  164.  + 1                    mpierr  = MPI_Recv( buffer, COUNT, HPL_2_MPI_TYPE( DTYPE ),
+  165.    1                                        partner, tag, COMM, &status );
+  166.  + 1                    OP( COUNT, buffer, BUFFER, DTYPE );
+  167.    1                 }
+  168.    1                 if( mpierr != MPI_SUCCESS ) hplerr = mpierr;
+  169.    1              }
+  170.    1              mask ^= ip2; ip2 <<= 1; d--;
+  171.    1--->       } while( d );
+  172.             }
+  173.             if( buffer ) free( buffer );
+  174.          
+  175.             return( hplerr );
+  176.          /*
+  177.           * End of HPL_reduce
+  178.           */
+  179.          }
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 120 
+  "MPI_Comm_size" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 122 
+  "MPI_Comm_rank" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-6254 CC: VECTOR File = HPL_reduce.c, Line = 123 
+  A loop was not vectorized because a recurrence was found on "i" at line 123.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 133 
+  "HPL_pabort" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-6287 CC: VECTOR File = HPL_reduce.c, Line = 137 
+  A loop was not vectorized because it contains a call to function "MPI_Recv" on line 139.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 139 
+  "MPI_Recv" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 143 
+  "OP" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-6287 CC: VECTOR File = HPL_reduce.c, Line = 149 
+  A loop was not vectorized because it contains a call to function "MPI_Send" on line 158.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 158 
+  "MPI_Send" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 164 
+  "MPI_Recv" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+CC-3021 CC: IPA File = HPL_reduce.c, Line = 166 
+  "OP" (called from "HPL_reduce") was not inlined because the compiler was unable to locate the routine.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

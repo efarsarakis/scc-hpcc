@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S u m m a r y   R e p o r t
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Compilation
+-----------
+File     : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../RandomAccess/utility.c
+Compiled : 2014-03-24  21:34:35
+Compiler : Version 8.2.x.x
+Ftnlx    : Version 8232 (libcif 82024)
+Target   : x86-64
+Command  : driver.cc -h cpu=ivybridge -h static -h network=aries
+           -o ../../../../RandomAccess/utility.o
+           -c ../../../../RandomAccess/utility.c -I ../../../../include
+           -I ../../../include -I ../../../include/CrayX1 -D Add_
+           -D StringSunStyle -D F77_INTEGER=int -O 2 -h list=m
+           -D LONG_IS_64BITS -h restrict=a
+           -ibase-compiler /opt/cray/cce/8.2.1/CC/x86-64/compiler_include_base
+           -isystem /opt/cray/cce/8.2.1/craylibs/x86-64/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include
+           -I /opt/gcc/4.4.4/snos/lib/gcc/x86_64-suse-linux/4.4.4/include-fixed
+           -L /opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/CC/x86-64/lib/x86-64
+           -L /opt/gcc/4.4.4/snos/lib64 -W l,-rpath=/opt/gcc/4.4.4/snos/lib64
+           -L /opt/cray/cce/8.2.1/craylibs/x86-64
+           -W l,-rpath=/opt/cray/cce/8.2.1/craylibs/x86-64 -lcraymath
+           -lquadmath -lcraymp
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+           -L /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/lib64
+           -L /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/lib64
+           -L /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/lib64
+           -L /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/lib64
+           -L /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/lib64
+           -L /opt/cray/ugni/5.0-1.0500.0.3.306.ari/lib64
+           -L /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/lib64
+           -I /opt/cray/mpt/6.1.1/gni/mpich2-cray/81/include
+           -I /opt/cray/libsci/12.1.2/CRAY/81/sandybridge/include
+           -I /opt/fftw/3.3.0.4/sandybridge/include
+           -I /opt/cray/rca/1.0.0-2.0500.41336.1.120.ari/include
+           -I /opt/cray/alps/5.0.3-2.0500.8095.1.1.ari/include
+           -I /opt/cray/xpmem/0.1-2.0500.41356.1.11.ari/include
+           -I /opt/cray/gni-headers/3.0-1.0500.7161.11.4.ari/include
+           -I /opt/cray/dmapp/6.0.1-1.0500.7263.9.31.ari/include
+           -I /opt/cray/pmi/4.0.1-1.0000.9753.86.2.ari/include
+           -I /opt/cray/ugni/5.0-1.0500.0.3.306.ari/include
+           -I /opt/cray/udreg/2.3.2-1.0500.6756.2.10.ari/include
+           -I /opt/cray-hss-devel/7.0.0/include
+           -I /opt/cray/krca/1.0.0-2.0500.41867.2.75.ari/include
+
+clx report
+------------
+Source   : /fs3/d59/d59/s1361615/isc14/scc-hpcc/hpcc-1.4.3/hpl/lib/arch/build/../../../../RandomAccess/utility.c
+Date     : 03/24/2014  21:34:36
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                          S o u r c e   L i s t i n g
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+     %%%    L o o p m a r k   L e g e n d    %%%
+
+     Primary Loop Type        Modifiers
+     ------- ---- ----        ---------
+     A - Pattern matched      a - atomic memory operation
+                              b - blocked
+     C - Collapsed            c - conditional and/or computed
+     D - Deleted               
+     E - Cloned               f - fused
+     G - Accelerated          g - partitioned
+     I - Inlined              i - interchanged
+     M - Multithreaded        m - partitioned
+                              n - non-blocking remote transfer
+                              p - partial
+                              r - unrolled
+                              s - shortloop
+     V - Vectorized           w - unwound
+
+     + - More messages listed at end of listing
+     ------------------------------------------
+
+
+    1.           /* -*- mode: C; tab-width: 2; indent-tabs-mode: nil; -*-
+    2.            *
+    3.            * This file provides utility functions for the RandomAccess benchmark suite.
+    4.            */
+    5.           
+    6.           #include <hpcc.h>
+    7.           #include "RandomAccess.h"
+    8.           
+    9.           
+   10.           /* Utility routine to start random number generator at Nth step */
+   11.           u64Int
+   12.           HPCC_starts(s64Int n)
+   13.           {
+   14.             int i, j;
+   15.             u64Int m2[64];
+   16.             u64Int temp, ran;
+   17.           
+   18.    D---<>   while (n < 0) n += PERIOD;
+   19.    D---<>   while (n > PERIOD) n -= PERIOD;
+   20.             if (n == 0) return 0x1;
+   21.           
+   22.             temp = 0x1;
+   23.  + r2---<   for (i=0; i<64; i++) {
+   24.    r2         m2[i] = temp;
+   25.    r2         temp = (temp << 1) ^ ((s64Int) temp < 0 ? POLY : 0);
+   26.    r2         temp = (temp << 1) ^ ((s64Int) temp < 0 ? POLY : 0);
+   27.    r2--->   }
+   28.           
+   29.  + 1----<   for (i=62; i>=0; i--)
+   30.    1          if ((n >> i) & 1)
+   31.    1---->       break;
+   32.           
+   33.             ran = 0x2;
+   34.  + 1----<   while (i > 0) {
+   35.    1          temp = 0;
+   36.  + 1 2--<     for (j=0; j<64; j++)
+   37.    1 2          if ((ran >> j) & 1)
+   38.    1 2-->         temp ^= m2[j];
+   39.    1          ran = temp;
+   40.    1          i -= 1;
+   41.    1          if ((n >> i) & 1)
+   42.    1            ran = (ran << 1) ^ ((s64Int) ran < 0 ? POLY : 0);
+   43.    1---->   }
+   44.           
+   45.             return ran;
+   46.           }
+   47.           
+   48.           /* Utility routine to start LCG random number generator at Nth step */
+   49.           u64Int
+   50.           HPCC_starts_LCG(s64Int n)
+   51.           {
+   52.             u64Int mul_k, add_k, ran, un;
+   53.           
+   54.             mul_k = LCG_MUL64;
+   55.             add_k = LCG_ADD64;
+   56.           
+   57.             ran = 1;
+   58.  + 1----<   for (un = (u64Int)n; un; un >>= 1) {
+   59.    1          if (un & 1)
+   60.    1            ran = mul_k * ran + add_k;
+   61.    1          add_k *= (mul_k + 1);
+   62.    1          mul_k *= mul_k;
+   63.    1---->   }
+   64.           
+   65.             return ran;
+   66.           }
+   67.           
+
+CC-6002 CC: SCALAR File = utility.c, Line = 18 
+  A loop was eliminated by optimization.
+
+CC-6002 CC: SCALAR File = utility.c, Line = 19 
+  A loop was eliminated by optimization.
+
+CC-6005 CC: SCALAR File = utility.c, Line = 23 
+  A loop was unrolled 2 times.
+
+CC-6254 CC: VECTOR File = utility.c, Line = 23 
+  A loop was not vectorized because a recurrence was found on "temp" at line 26.
+
+CC-6334 CC: VECTOR File = utility.c, Line = 29 
+  A loop was not vectorized because it contains multiple potential exits.
+
+CC-6294 CC: VECTOR File = utility.c, Line = 34 
+  A loop was not vectorized because a better candidate was found at line 36.
+
+CC-6332 CC: VECTOR File = utility.c, Line = 36 
+  A loop was not vectorized because it does not map well onto the target architecture.
+
+CC-6254 CC: VECTOR File = utility.c, Line = 58 
+  A loop was not vectorized because a recurrence was found on "ran" at line 60.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

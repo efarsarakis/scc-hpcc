@@ -1,0 +1,18 @@
+--------------------------------------------------------------------------------
+*** s1361615   Job: 180173.sdb   started: 24/03/14 21:49:39   host: mom4 ***
+*** s1361615   Job: 180173.sdb   started: 24/03/14 21:49:39   host: mom4 ***
+*** s1361615   Job: 180173.sdb   started: 24/03/14 21:49:39   host: mom4 ***
+*** s1361615   Job: 180173.sdb   started: 24/03/14 21:49:39   host: mom4 ***
+
+--------------------------------------------------------------------------------
+Application 7336310 resources: utime ~547s, stime ~7s, Rss ~125536, inblocks ~18918, outblocks ~30304
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=24,place=free,walltime=00:20:00
+Resources allocated: cpupercent=0,cput=00:00:01,mem=6292kb,ncpus=24,vmem=141164kb,walltime=00:00:25
+
+*** s1361615   Job: 180173.sdb   ended: 24/03/14 21:50:04   queue: standard ***
+*** s1361615   Job: 180173.sdb   ended: 24/03/14 21:50:04   queue: standard ***
+*** s1361615   Job: 180173.sdb   ended: 24/03/14 21:50:04   queue: standard ***
+*** s1361615   Job: 180173.sdb   ended: 24/03/14 21:50:04   queue: standard ***
+--------------------------------------------------------------------------------
